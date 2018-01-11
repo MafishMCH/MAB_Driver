@@ -59,7 +59,7 @@ LIST_FILES = $(addsuffix .o.lst, $(basename $(OBJS)))
 MAP_FILE = "Silniki2_0.map"
 
 TOOLCHAIN_ROOT=C:/DAVEv4-64Bit/DAVE-4.3.2/eclipse/ARM-GCC-49
-PROJECT_LOC=C:/Users/Mafish/Documents/XMCDev/Silniki2_0
+PROJECT_LOC=C:/Users/Mafish/Documents/GitHub/MAB_Driver
 
 # All Target
 all: Silniki2_0.elf secondary-outputs

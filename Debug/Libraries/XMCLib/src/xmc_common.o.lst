@@ -22,260 +22,260 @@
   22              	 .thumb_func
   24              	XMC_PRIOARRAY_GetHead:
   25              	.LFB123:
-  26              	 .file 1 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc/xmc_common.h"
-   1:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**
-   2:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
-   3:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2017-08-03
-   4:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-   5:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
-   6:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
-   7:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
-   8:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-   9:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2017, Infineon Technologies AG
-  10:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
-  11:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
-  12:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
-  13:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
-  14:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  15:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
-  16:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
-  17:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  18:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
-  19:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
-  20:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 
-  21:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
-  22:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
-  23:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  24:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
-  25:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
-  26:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
-  27:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
-  28:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
-  29:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
-  30:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
-  31:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
-  32:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
-  33:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
-  34:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  35:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  36:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
-  37:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
-  38:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  39:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
-  40:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
-  41:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
-  42:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
-  43:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  44:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
-  45:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
-  46:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *      
-  47:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
-  48:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
-  49:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  50:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-11-18:
-  51:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.10
-  52:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Changed type of size in XMC_PRIOARRAY_t to fix compilation warnings
-  53:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  54:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-04-04:
-  55:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.12
-  56:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  57:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-06-24:
-  58:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.14
-  59:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  60:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-08-03:
-  61:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.16
-  62:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added __RAM_FUNC macro
-  63:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  64:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
-  65:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
-  66:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
-  67:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  68:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
-  69:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
-  70:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  71:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
-  72:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
-  73:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
-  74:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
-  75:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  76:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
-  77:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  78:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**
-  79:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
-  80:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  81:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
-  82:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  83:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**
-  84:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
-  85:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
-  86:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * @{
-  87:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
-  88:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  89:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
-  90:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
-  91:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
-  92:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
-  93:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
-  94:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(16U)
-  95:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  
-  96:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
-  97:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
-  98:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
-  99:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
- 100:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
- 101:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 102:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
- 103:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
- 104:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
- 105:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 106:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
- 107:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
- 108:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 109:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 110:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 111:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__RAM_FUNC)
- 112:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
- 113:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** // http://www.keil.com/support/docs/3723.htm
- 114:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
- 115:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
- 116:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** // https://www.iar.com/support/tech-notes/linker/controlling-placement-of-the-section-where-__ramfu
- 117:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __ramfunc
- 118:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
- 119:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code"), long_call))
- 120:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
- 121:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code")))
- 122:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 123:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 124:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 125:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
- 126:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
- 127:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #else
- 128:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
- 129:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 130:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 131:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
- 132:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
- 133:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
- 134:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #else
- 135:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
- 136:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 137:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 138:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
- 139:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 140:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
- 141:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 142:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
- 143:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
- 144:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
- 145:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 146:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
- 147:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
- 148:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 149:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 150:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
- 151:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 152:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 153:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 154:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 155:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
- 156:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
- 157:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
- 158:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
- 159:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
- 160:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
- 161:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 162:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 163:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 164:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 165:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
- 166:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 167:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 168:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 169:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 170:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
- 171:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
- 172:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
- 173:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
- 174:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
- 175:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
- 176:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 177:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 178:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 179:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 180:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
- 181:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
- 182:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   int32_t size;
- 183:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
- 184:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
- 185:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 186:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
- 187:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
- 188:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
- 189:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 190:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
- 191:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
- 192:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** #endif
- 193:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 194:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 195:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 196:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 197:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
- 198:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 199:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 200:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 201:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 202:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
- 203:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 204:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 205:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 206:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 207:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
- 208:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 209:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 210:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 211:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 212:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
- 213:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 214:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 215:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 216:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 217:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
- 218:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 219:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 220:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 221:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 222:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
- 223:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 224:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 225:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 226:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 227:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
- 228:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 229:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 230:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 231:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 232:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
- 233:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 234:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 235:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 236:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 237:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
- 238:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 239:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 240:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 241:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 242:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
- 243:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 244:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 245:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 246:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 247:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
- 248:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 249:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 250:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 251:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 252:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
- 253:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
+  26              	 .file 1 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc/xmc_common.h"
+   1:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**
+   2:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @file xmc_common.h
+   3:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @date 2017-08-03
+   4:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+   5:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @cond
+   6:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   *************************************************************************************************
+   7:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
+   8:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+   9:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Copyright (c) 2015-2017, Infineon Technologies AG
+  10:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * All rights reserved.                        
+  11:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *                                             
+  12:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  13:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * following conditions are met:   
+  14:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  15:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  16:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer.                        
+  17:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  18:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  19:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  20:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 
+  21:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  22:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * products derived from this software without specific prior written permission.                  
+  23:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  24:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  25:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  26:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  27:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  28:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  29:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  30:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  31:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *                                                                              
+  32:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  33:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  34:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  35:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  36:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * Change History
+  37:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * --------------
+  38:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  39:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2015-06-20:
+  40:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Initial
+  41:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Brief section updated
+  42:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added XMC_LIB_VERSION macro
+  43:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  44:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-02-26:
+  45:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.6
+  46:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *      
+  47:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-05-30:
+  48:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.8
+  49:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  50:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2016-11-18:
+  51:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.10
+  52:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Changed type of size in XMC_PRIOARRAY_t to fix compilation warnings
+  53:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  54:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-04-04:
+  55:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.12
+  56:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  57:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-06-24:
+  58:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.14
+  59:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  60:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * 2017-08-03:
+  61:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Updated XMC_LIB_VERSION macro to v2.1.16
+  62:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *     - Added __RAM_FUNC macro
+  63:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  64:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @endcond 
+  65:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+  66:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+  67:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  68:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #ifndef XMC_COMMON_H
+  69:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_COMMON_H
+  70:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  71:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #include <stddef.h>
+  72:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #include <stdint.h>
+  73:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #include <stdbool.h>
+  74:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #include <string.h>
+  75:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  76:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #include "xmc_device.h"
+  77:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  78:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**
+  79:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup XMClib XMC Peripheral Library
+  80:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  81:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+  82:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  83:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**
+  84:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @addtogroup COMMON
+  85:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @brief Common APIs to all peripherals for XMC microcontroller family 
+  86:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * @{
+  87:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+  88:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  89:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+  90:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * MACROS
+  91:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+  92:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MAJOR_VERSION	(2U)
+  93:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_MINOR_VERSION	(1U)
+  94:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_PATCH_VERSION	(16U)
+  95:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  
+  96:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_LIB_VERSION         ((XMC_LIB_MAJOR_VERSION << 16U) + (XMC_LIB_MINOR_VERSION << 8U) + X
+  97:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+  98:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /* Define WEAK attribute */
+  99:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__WEAK)
+ 100:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
+ 101:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 102:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
+ 103:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __weak
+ 104:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
+ 105:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 106:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
+ 107:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __WEAK __attribute__ ((weak))
+ 108:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 109:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 110:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 111:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #if !defined(__RAM_FUNC)
+ 112:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #if defined ( __CC_ARM )
+ 113:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** // http://www.keil.com/support/docs/3723.htm
+ 114:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section("RAMCODESECTION")))
+ 115:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __ICCARM__ )
+ 116:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** // https://www.iar.com/support/tech-notes/linker/controlling-placement-of-the-section-where-__ramfu
+ 117:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __ramfunc
+ 118:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __GNUC__ )
+ 119:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code"), long_call))
+ 120:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #elif defined ( __TASKING__ )
+ 121:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define __RAM_FUNC __attribute__((section(".ram_code")))
+ 122:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 123:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 124:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 125:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_ASSERT_ENABLE
+ 126:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { if(!(exp)) {XMC_AssertHandler(msg, __FILE__, __LINE__);} }
+ 127:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 128:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_ASSERT(msg, exp) { ; }
+ 129:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 130:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 131:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #ifdef XMC_DEBUG_ENABLE
+ 132:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  #include <stdio.h>
+ 133:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { printf(__VA_ARGS__); }
+ 134:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #else
+ 135:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  #define XMC_DEBUG(...) { ; }
+ 136:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 137:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 138:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_UNUSED_ARG(x) (void)x
+ 139:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 140:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_STRUCT_INIT(m) memset(&m, 0, sizeof(m))
+ 141:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 142:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY_DEF(name, size) \
+ 143:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_ITEM_t prioarray_m_##name[size + 2]; \
+ 144:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** XMC_PRIOARRAY_t prioarray_def_##name = {(size), (prioarray_m_##name)};
+ 145:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 146:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #define XMC_PRIOARRAY(name) \
+ 147:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** &prioarray_def_##name
+ 148:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 149:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 150:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * DATA STRUCTURES
+ 151:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 152:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 153:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 154:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 155:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_DRIVER_VERSION 
+ 156:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
+ 157:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t major;
+ 158:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t minor;
+ 159:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   uint8_t patch;
+ 160:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** } XMC_DRIVER_VERSION_t;
+ 161:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 162:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 163:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 164:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 165:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** typedef void *XMC_LIST_t;
+ 166:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 167:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 168:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 169:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 170:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY_ITEM
+ 171:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
+ 172:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   int32_t priority;
+ 173:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   int32_t previous;
+ 174:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   int32_t next;
+ 175:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_ITEM_t;
+ 176:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 177:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 178:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 179:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 180:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** typedef struct XMC_PRIOARRAY
+ 181:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
+ 182:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   int32_t size;
+ 183:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   XMC_PRIOARRAY_ITEM_t *items;
+ 184:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** } XMC_PRIOARRAY_t;
+ 185:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 186:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /**************************************************************************************************
+ 187:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  * API PROTOTYPES
+ 188:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  **************************************************************************************************
+ 189:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 190:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #ifdef __cplusplus
+ 191:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** extern "C" {
+ 192:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** #endif
+ 193:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 194:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 195:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 196:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 197:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_AssertHandler(const char *const msg, const char *const file, uint32_t line);
+ 198:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 199:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 200:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 201:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 202:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Init(XMC_LIST_t *list);
+ 203:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 204:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 205:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 206:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 207:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Add(XMC_LIST_t *list, void *const item);
+ 208:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 209:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 210:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 211:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 212:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Remove(XMC_LIST_t *list, void *const item);
+ 213:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 214:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 215:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 216:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 217:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** uint32_t XMC_LIST_GetLength(XMC_LIST_t *list);
+ 218:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 219:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 220:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 221:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 222:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetHead(XMC_LIST_t *list);
+ 223:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 224:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 225:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 226:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 227:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void *XMC_LIST_GetTail(XMC_LIST_t *list);
+ 228:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 229:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 230:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 231:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 232:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_LIST_Insert(XMC_LIST_t *list, void *prev_item, void *new_item);
+ 233:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 234:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 235:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 236:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 237:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Init(XMC_PRIOARRAY_t *prioarray);
+ 238:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 239:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 240:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 241:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 242:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Add(XMC_PRIOARRAY_t *prioarray, int32_t item, int32_t priority);
+ 243:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 244:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 245:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 246:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 247:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** void XMC_PRIOARRAY_Remove(XMC_PRIOARRAY_t *prioarray, int32_t item);
+ 248:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 249:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 250:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 251:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 252:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetHead(XMC_PRIOARRAY_t *prioarray)
+ 253:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
   27              	 .loc 1 253 0
   28              	 .cfi_startproc
   29              	 
@@ -292,8 +292,8 @@
   40              	.LCFI2:
   41              	 .cfi_def_cfa_register 7
   42 0006 7860     	 str r0,[r7,#4]
- 254:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 255:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
+ 254:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 255:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size].next;
   43              	 .loc 1 255 0
   44 0008 7B68     	 ldr r3,[r7,#4]
   45 000a 5A68     	 ldr r2,[r3,#4]
@@ -306,7 +306,7 @@
   52 0018 9B00     	 lsls r3,r3,#2
   53 001a 1344     	 add r3,r3,r2
   54 001c 9B68     	 ldr r3,[r3,#8]
- 256:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** }
+ 256:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** }
   55              	 .loc 1 256 0
   56 001e 1846     	 mov r0,r3
   57 0020 0C37     	 adds r7,r7,#12
@@ -329,21 +329,21 @@
   75              	 .thumb_func
   77              	XMC_PRIOARRAY_GetItemPriority:
   78              	.LFB125:
- 257:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 258:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 259:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 260:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 261:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
- 262:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
- 263:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
- 264:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
- 265:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** }
- 266:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 267:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 268:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 269:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 270:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 271:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
+ 257:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 258:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 259:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 260:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 261:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetTail(XMC_PRIOARRAY_t *prioarray)
+ 262:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
+ 263:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_Init: NULL pointer", prioarray != NULL);
+ 264:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[prioarray->size + 1].previous;
+ 265:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** }
+ 266:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 267:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 268:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 269:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 270:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemPriority(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 271:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
   79              	 .loc 1 271 0
   80              	 .cfi_startproc
   81              	 
@@ -361,8 +361,8 @@
   93              	 .cfi_def_cfa_register 7
   94 0006 7860     	 str r0,[r7,#4]
   95 0008 3960     	 str r1,[r7]
- 272:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
- 273:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
+ 272:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemPriority: item out of range", (item >= 0) && (item < prioarray->
+ 273:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].priority;
   96              	 .loc 1 273 0
   97 000a 7B68     	 ldr r3,[r7,#4]
   98 000c 5968     	 ldr r1,[r3,#4]
@@ -373,7 +373,7 @@
  103 0016 9B00     	 lsls r3,r3,#2
  104 0018 0B44     	 add r3,r3,r1
  105 001a 1B68     	 ldr r3,[r3]
- 274:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** }
+ 274:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** }
  106              	 .loc 1 274 0
  107 001c 1846     	 mov r0,r3
  108 001e 0C37     	 adds r7,r7,#12
@@ -396,12 +396,12 @@
  126              	 .thumb_func
  128              	XMC_PRIOARRAY_GetItemNext:
  129              	.LFB126:
- 275:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** 
- 276:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** /*
- 277:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  *
- 278:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****  */
- 279:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
- 280:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** {
+ 275:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** 
+ 276:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** /*
+ 277:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  *
+ 278:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****  */
+ 279:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** __STATIC_INLINE int32_t XMC_PRIOARRAY_GetItemNext(XMC_PRIOARRAY_t *prioarray, int32_t item)
+ 280:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** {
  130              	 .loc 1 280 0
  131              	 .cfi_startproc
  132              	 
@@ -419,8 +419,8 @@
  144              	 .cfi_def_cfa_register 7
  145 0006 7860     	 str r0,[r7,#4]
  146 0008 3960     	 str r1,[r7]
- 281:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
- 282:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
+ 281:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   XMC_ASSERT("XMC_PRIOARRAY_GetItemNext: item out of range", (item >= 0) && (item < prioarray->size
+ 282:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h ****   return prioarray->items[item].next;
  147              	 .loc 1 282 0
  148 000a 7B68     	 ldr r3,[r7,#4]
  149 000c 5968     	 ldr r1,[r3,#4]
@@ -431,7 +431,7 @@
  154 0016 9B00     	 lsls r3,r3,#2
  155 0018 0B44     	 add r3,r3,r1
  156 001a 9B68     	 ldr r3,[r3,#8]
- 283:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_common.h **** }
+ 283:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_common.h **** }
  157              	 .loc 1 283 0
  158 001c 1846     	 mov r0,r3
  159 001e 0C37     	 adds r7,r7,#12
@@ -1368,7 +1368,7 @@
  889              	.Letext0:
  890              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
  891              	 .file 4 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 892              	 .file 5 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Include/core_cm4.h"
+ 892              	 .file 5 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/CMSIS/Include/core_cm4.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_common.c
     {standard input}:20     .text.XMC_PRIOARRAY_GetHead:00000000 $t

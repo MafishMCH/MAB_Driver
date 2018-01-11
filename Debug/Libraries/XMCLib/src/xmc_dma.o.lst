@@ -22,536 +22,536 @@
   22              	 .thumb_func
   24              	XMC_DMA_GetEventStatus:
   25              	.LFB128:
-  26              	 .file 1 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc/xmc_dma.h"
-   1:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-   2:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
-   3:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @file xmc_dma.h
-   4:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @date 2016-10-28
-   5:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-   6:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @cond
-   7:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
-   8:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
-   9:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  10:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Copyright (c) 2015-2017, Infineon Technologies AG
-  11:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * All rights reserved.                        
-  12:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *                                             
-  13:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
-  14:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * following conditions are met:   
-  15:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  16:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
-  17:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer.                        
-  18:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * 
-  19:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
-  20:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
-  21:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * 
-  22:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
-  23:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * products derived from this software without specific prior written permission.                  
-  24:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  25:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
-  26:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
-  27:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
-  28:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
-  29:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
-  30:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
-  31:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
-  32:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
-  33:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
-  34:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
-  35:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
-  36:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  37:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Change History
-  38:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * --------------
-  39:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  40:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-02-20:
-  41:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Initial <br>
-  42:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  43:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-06-20:
-  44:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Add the declarations for the following APIs: <br>
-  45:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_DisableRequestLine, XMC_DMA_ClearRequestLine, <br>
-  46:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearSourcePeripheralRequest, <br>
-  47:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearDestinationPeripheralRequest <br>
-  48:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Documentation updates <br>
-  49:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Removed version macros and declaration of GetDriverVersion API <br>
-  50:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  51:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * 2016-10-28:
-  52:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Fix documentation on maximum block size
-  53:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  54:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @endcond
-  55:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  56:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  57:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #ifndef XMC_DMA_H
-  58:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA_H
-  59:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  60:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
-  61:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * HEADER FILES
-  62:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
-  63:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  64:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_common.h"
-  65:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  66:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
-  67:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  68:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_dma_map.h"
-  69:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  70:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
-  71:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup XMClib XMC Peripheral Library
-  72:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
-  73:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  74:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  75:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
-  76:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup DMA
-  77:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @brief General purpose DMA (GPDMA) driver for the XMC4000 microcontroller family
-  78:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  79:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The GPDMA is a highly configurable DMA controller that allows high-speed data transfers
-  80:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * between peripherals and memories. Complex data transfers can be done with minimal
-  81:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * intervention of the processor, making CPU available for other operations.
-  82:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  83:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA provides extensive support for XMC microcontroller peripherals like A/D, D/A
-  84:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * converters and timers. Data transfers through communication interfaces (USIC) using the
-  85:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA increase efficiency and parallelism for real-time applications.
-  86:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
-  87:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The DMA low level driver provides functions to configure and initialize the GPDMA
-  88:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * hardware peripheral.
-  89:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
-  90:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
-  91:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  92:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
-  93:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * MACROS
-  94:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
-  95:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
-  96:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
-  97:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0 ((XMC_DMA_t *)GPDMA0_CH0_BASE) /**< DMA module 0 */
-  98:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0_NUM_CHANNELS 8
-  99:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 100:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 101:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA1)
- 102:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1 ((XMC_DMA_t *)GPDMA1_CH0_BASE) /**< DMA module 1, only available in XMC45xx series
- 103:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1_NUM_CHANNELS 4
- 104:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 105:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 106:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 107:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * ENUMS
- 108:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 109:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 110:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 111:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer types
- 112:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 113:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_TYPE
- 114:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 115:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_SINGLE_BLOCK,                                /**< Single block */
- 116:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_RELOAD, /**< Multi-block: src addre
- 117:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
- 118:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_RELOAD,     /**< Multi-block: src addre
- 119:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_LINKED, /**< Multi-block: src addre
- 120:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_LINKED,     /**< Multi-block: src addre
- 121:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
- 122:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_RELOAD,     /**< Multi-block: src addre
- 123:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_LINKED      /**< Multi-block: src addre
- 124:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_TYPE_t;
- 125:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 126:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 127:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer flow modes
- 128:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 129:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_FLOW
- 130:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 131:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2M_DMA    = 0x0UL, /**< Memory to memory (DMA flow controller) */
- 132:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_DMA    = 0x1UL, /**< Memory to peripheral (DMA flow controller) */
- 133:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_DMA    = 0x2UL, /**< Peripheral to memory (DMA flow controller) */
- 134:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DMA    = 0x3UL, /**< Peripheral to peripheral (DMA flow controller) 
- 135:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_PER    = 0x4UL, /**< Peripheral to memory (Peripheral flow controlle
- 136:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_SRCPER = 0x5UL, /**< Peripheral to peripheral (Source peripheral flo
- 137:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_PER    = 0x6UL, /**< Memory to peripheral (Peripheral flow controlle
- 138:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DSTPER = 0x7UL  /**< Peripheral to peripheral (Destination periphera
- 139:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_FLOW_t;
- 140:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 141:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 142:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid burst length values
- 143:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 144:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_BURST_LENGTH
- 145:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 146:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_1 = 0x0UL, /**< Burst length: 1 word */
- 147:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_4 = 0x1UL, /**< Burst length: 4 words */
- 148:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_8 = 0x2UL  /**< Burst length: 8 words */
- 149:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_BURST_LENGTH_t;
- 150:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 151:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 152:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid transfer width values
- 153:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 154:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_WIDTH
- 155:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 156:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_8  = 0x0UL, /**< 8-bit transfer width */
- 157:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_16 = 0x1UL, /**< 16-bit transfer width */
- 158:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_32 = 0x2UL  /**< 32-bit transfer width */
- 159:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_WIDTH_t;
- 160:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 161:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 162:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA address count mode
- 163:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 164:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_ADDRESS_COUNT_MODE
- 165:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 166:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_INCREMENT = 0x0UL, /**< Address count mode: increment */
- 167:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_DECREMENT = 0x1UL, /**< Address count mode: decrement */
- 168:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_NO_CHANGE = 0x2UL  /**< Address count mode: no change */
- 169:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_ADDRESS_COUNT_MODE_t;
- 170:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 171:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 172:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel priorities
- 173:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 174:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_PRIORITY
- 175:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 176:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_0 = 0x0UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 0 (low) *
- 177:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_1 = 0x1UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 1 */
- 178:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_2 = 0x2UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 2 */
- 179:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_3 = 0x3UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 3 */
- 180:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_4 = 0x4UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 4 */
- 181:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_5 = 0x5UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 5 */
- 182:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_6 = 0x6UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 6 */
- 183:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_7 = 0x7UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos  /**< DMA channel priority 7 (high) 
- 184:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_PRIORITY_t;
- 185:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 186:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 187:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Source handshake interface
- 188:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 189:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_SRC_HANDSHAKING
- 190:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 191:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos, /**< Source: hardwa
- 192:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos  /**< Source: softwa
- 193:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_SRC_HANDSHAKING_t;
- 194:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 195:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 196:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination handshake interface
- 197:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 198:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_DST_HANDSHAKING
- 199:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 200:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos, /**< Destination: h
- 201:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos  /**< Destination: s
- 202:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_DST_HANDSHAKING_t;
- 203:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 204:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 205:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA hardware handshaking interface
- 206:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Hardware handshaking available only if DMA is flow controller
- 207:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 208:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_HARDWARE_HANDSHAKING_IF
- 209:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 210:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_0 = 0x0UL, /**< Hardware handshaking interface 0 */
- 211:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_1 = 0x1UL, /**< Hardware handshaking interface 1 */
- 212:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_2 = 0x2UL, /**< Hardware handshaking interface 2 */
- 213:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_3 = 0x3UL, /**< Hardware handshaking interface 3 */
- 214:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_4 = 0x4UL, /**< Hardware handshaking interface 4 */
- 215:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_5 = 0x5UL, /**< Hardware handshaking interface 5 */
- 216:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_6 = 0x6UL, /**< Hardware handshaking interface 6 */
- 217:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_7 = 0x7UL  /**< Hardware handshaking interface 7 */
- 218:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_t;
- 219:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 220:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 221:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA events
- 222:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 223:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_EVENT
- 224:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 225:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_TRANSFER_COMPLETE        = 0x1UL, /**< Transfer complete event */
- 226:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE  = 0x2UL, /**< Block transfer complete event */
- 227:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE = 0x4UL, /**< Source transaction complete event */
- 228:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE = 0x8UL, /**< Destination transaction complete event */
- 229:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_ERROR                    = 0x10UL /**< DMA error event */
- 230:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_EVENT_t;
- 231:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 232:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 233:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Transaction types
- 234:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 235:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSACTION_TYPE
- 236:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 237:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_SINGLE, /**< Single DMA transaction */
- 238:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_BURST   /**< Burst transaction */
- 239:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSACTION_TYPE_t;
- 240:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 241:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 242:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel status values
- 243:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 244:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_STATUS
- 245:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 246:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_OK,    /**< DMA status OK */
- 247:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_ERROR, /**< DMA status error */
- 248:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_BUSY   /**< DMA is busy */
- 249:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_STATUS_t;
- 250:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 251:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 252:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DATA STRUCTURES
- 253:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 254:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 255:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 256:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure <br>
- 257:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 258:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
- 259:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the DMA channel. It is contained within the ::XMC_DMA_t
- 260:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * structure. It's registers can be used to configure DMA transfer details
- 261:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * like source address, destination address, block size, incrementation
- 262:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * modes and the like.
- 263:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 264:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  
- 265:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
- 266:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SAR;
- 267:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED0;
- 268:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DAR;
- 269:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED1;
- 270:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LLP;
- 271:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED2;
- 272:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLL;
- 273:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLH;
- 274:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTAT;
- 275:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED3;
- 276:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTAT;
- 277:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED4;
- 278:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTATAR;
- 279:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED5;
- 280:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTATAR;
- 281:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED6;
- 282:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGL;
- 283:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGH;
- 284:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGR;
- 285:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED7;
- 286:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSR;
- 287:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED8;
- 288:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } GPDMA_CH_t;
- 289:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 290:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 291:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA device structure <br>
- 292:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 293:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
- 294:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the GPDMA peripheral on the XMC4000 series of microcontrollers.
- 295:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The registers can be accessed with ::XMC_DMA0 and ::XMC_DMA1.
- 296:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 297:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
- 298:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   GPDMA_CH_t CH[8];
- 299:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 300:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  RAWCHEV[10];
- 301:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSCHEV[10];
- 302:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  MASKCHEV[10];
- 303:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __O  uint32_t  CLEARCHEV[10];
- 304:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSGLEV;
- 305:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED20;
- 306:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQSRCREG;
- 307:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED21;
- 308:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQDSTREG;
- 309:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED22;
- 310:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQSRCREG;
- 311:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED23;
- 312:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQDSTREG;
- 313:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED24;
- 314:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTSRCREG;
- 315:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED25;
- 316:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTDSTREG;
- 317:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED26;
- 318:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DMACFGREG;
- 319:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED27;
- 320:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CHENREG;
- 321:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED28;
- 322:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  ID;
- 323:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED29[19];
- 324:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  TYPE;
- 325:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  VERSION;
- 326:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_t;
- 327:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 328:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard start */
- 329:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
- 330:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma push
- 331:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma anon_unions
- 332:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
- 333:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning 586
- 334:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 335:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 336:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 337:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel linked list item.
- 338:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Note: Needs to be word aligned
- 339:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 340:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_LLI
- 341:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 342:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
- 343:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
- 344:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   struct XMC_DMA_LLI *llp;                      /**< Linked list pointer of type XMC_DMA_LLI_t */
- 345:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 346:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 347:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 348:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 349:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
- 350:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width */
- 351:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width */
- 352:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode */
- 353:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode */
- 354:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length */
- 355:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length */
- 356:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
- 357:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
- 358:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             /**< Reserved bits */
- 359:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow */
- 360:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 4;                             /**< Reserved bits */
- 361:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_linked_list: 1;       /**< Enable destination linked list? */
- 362:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_linked_list: 1;       /**< Enable source linked list? */
- 363:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 3;                             /**< Reserved bits */
- 364:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 365:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
- 366:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 367:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t block_size;                          /**< Transfer block size */
- 368:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_status;                          /**< Source status */
- 369:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_status;                          /**< Destination status */
- 370:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_LLI_t;
- 371:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 372:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef XMC_DMA_LLI_t **XMC_DMA_LIST_t;         /**< Type definition for a linked list pointer */
- 373:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 374:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 375:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure
- 376:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 377:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_CH_CONFIG
- 378:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
- 379:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 380:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 381:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
- 382:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 383:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 384:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
- 385:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width */
- 386:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width */
- 387:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode */
- 388:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode */
- 389:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length */
- 390:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length */
- 391:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
- 392:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
- 393:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             
- 394:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow */
- 395:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 9;                             
- 396:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 397:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 398:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 399:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
- 400:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
- 401:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_LLI_t *linked_list_pointer;           /**< Linked list pointer */
- 402:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   
- 403:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 404:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 405:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t src_gather_control;
- 406:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 407:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 408:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_interval: 20;         /**< Source gather interval */
- 409:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_count: 12;            /**< Source gather count */
- 410:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 411:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 412:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 413:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   union
- 414:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   {
- 415:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t dst_scatter_control;
- 416:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     struct
- 417:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     {
- 418:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_interval: 20;        /**< Destination scatter interval */
- 419:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_count: 12;           /**< Destination scatter count */
- 420:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****     };
- 421:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   };
- 422:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   
- 423:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint16_t block_size;                          /**< Block size for DMA controlled transfers [max. 
- 424:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_t transfer_type;     /**< DMA transfer type */
- 425:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_t priority;               /**< DMA channel priority */
- 426:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_t src_handshaking; /**< DMA source handshaking interface */
- 427:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t src_peripheral_request;               /**< Source peripheral request */
- 428:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_t dst_handshaking; /**< DMA destination handshaking interface */
- 429:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t dst_peripheral_request;               /**< Destination peripheral request */
- 430:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_CONFIG_t;
- 431:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 432:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard end */
- 433:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
- 434:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma pop
- 435:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
- 436:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning restore
- 437:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 438:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 439:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 440:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel event handler
- 441:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 442:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** typedef void (*XMC_DMA_CH_EVENT_HANDLER_t)(XMC_DMA_CH_EVENT_t event);
- 443:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 444:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
- 445:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * API PROTOTYPES
- 446:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
- 447:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 448:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #ifdef __cplusplus
- 449:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** extern "C" {
- 450:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** #endif
- 451:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 452:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 453:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 454:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 455:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 456:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 457:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Initialize the GPDMA peripheral <br>
- 458:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 459:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 460:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function initializes a prioritized list of DMA channels and enables the GPDMA
- 461:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral.
- 462:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 463:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Init(XMC_DMA_t *const dma);
- 464:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 465:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 466:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 467:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 468:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 469:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 470:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Enable the GPDMA peripheral <br>
- 471:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 472:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 473:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function de-asserts the GPDMA peripheral reset. In addition, it un-gates the
- 474:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA0 peripheral clock for all XMC4000 series of microcontrollers with an exception
- 475:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * of the XMC4500 microcontroller. The XMC4500 doesn't support gating.
- 476:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 477:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Enable(XMC_DMA_t *const dma);
- 478:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 479:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 480:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 481:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
- 482:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 483:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 484:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Disable the GPDMA peripheral <br>
- 485:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 486:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 487:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function asserts the GPDMA peripheral reset. In addition, it gates the GPDMA0
- 488:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral clock for all XMC4000 series of microcontrollers with an exception of
- 489:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * the XMC4500 microcontroller. The XMC4500 doesn't support gating.
- 490:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 491:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Disable(XMC_DMA_t *const dma);
- 492:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 493:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 494:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 495:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return bool
- 496:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 497:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 498:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Check if the GPDMA peripheral is enabled <br>
- 499:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 500:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 501:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * For the XMC4500 microcontroller, the function checks if the GPDMA module is asserted
- 502:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * and returns "false" if it is. In addition, it also checks if the clock is gated
- 503:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * for the other XMC4000 series of microcontrollers. It returns "true" if the peripheral
- 504:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * is enabled.
- 505:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 506:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** bool XMC_DMA_IsEnabled(const XMC_DMA_t *const dma);
- 507:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 508:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 509:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 510:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 511:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 512:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 513:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA event status <br>
- 514:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 515:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 516:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the collective (global) status of GPDMA events. The following
- 517:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * lists the various DMA events and their corresponding enumeration. The return value
- 518:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * of this function may then be masked with any one of the following enumerations to
- 519:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * obtain the status of individual DMA events. <br>
- 520:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 521:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 522:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Transfer complete -> ::XMC_DMA_CH_EVENT_TRANSFER_COMPLETE                       <br>
- 523:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Block transfer complete -> ::XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE           <br>
- 524:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Source transaction complete -> ::XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE      <br>
- 525:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination transaction complete -> ::XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE <br>
- 526:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA error event -> ::XMC_DMA_CH_EVENT_ERROR                                     <br>
- 527:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 528:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetEventStatus(XMC_DMA_t *const dma)
- 529:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+  26              	 .file 1 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc/xmc_dma.h"
+   1:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+   2:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+   3:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @file xmc_dma.h
+   4:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @date 2016-10-28
+   5:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+   6:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @cond
+   7:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
+   8:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * XMClib v2.1.16 - XMC Peripheral Driver Library 
+   9:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  10:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Copyright (c) 2015-2017, Infineon Technologies AG
+  11:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * All rights reserved.                        
+  12:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *                                             
+  13:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  14:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * following conditions are met:   
+  15:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  16:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions of source code must retain the above copyright notice, this list of conditions a
+  17:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer.                        
+  18:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * 
+  19:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Redistributions in binary form must reproduce the above copyright notice, this list of condition
+  20:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * disclaimer in the documentation and/or other materials provided with the distribution.          
+  21:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * 
+  22:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Neither the name of the copyright holders nor the names of its contributors may be used to endor
+  23:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * products derived from this software without specific prior written permission.                  
+  24:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  25:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  26:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  27:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  28:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  29:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  30:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  31:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                            
+  32:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *                                                                              
+  33:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  34:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Infineon Technologies AG dave@infineon.com).                                                    
+  35:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  **************************************************************************************************
+  36:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  37:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Change History
+  38:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * --------------
+  39:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  40:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-02-20:
+  41:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Initial <br>
+  42:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  43:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * 2015-06-20:
+  44:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Add the declarations for the following APIs: <br>
+  45:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_DisableRequestLine, XMC_DMA_ClearRequestLine, <br>
+  46:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearSourcePeripheralRequest, <br>
+  47:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *       XMC_DMA_CH_ClearDestinationPeripheralRequest <br>
+  48:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Documentation updates <br>
+  49:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Removed version macros and declaration of GetDriverVersion API <br>
+  50:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  51:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * 2016-10-28:
+  52:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *     - Fix documentation on maximum block size
+  53:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  54:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @endcond
+  55:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  56:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  57:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #ifndef XMC_DMA_H
+  58:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA_H
+  59:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  60:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+  61:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * HEADER FILES
+  62:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+  63:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  64:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_common.h"
+  65:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  66:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
+  67:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  68:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #include "xmc_dma_map.h"
+  69:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  70:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+  71:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup XMClib XMC Peripheral Library
+  72:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
+  73:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  74:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  75:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+  76:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @addtogroup DMA
+  77:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @brief General purpose DMA (GPDMA) driver for the XMC4000 microcontroller family
+  78:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  79:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The GPDMA is a highly configurable DMA controller that allows high-speed data transfers
+  80:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * between peripherals and memories. Complex data transfers can be done with minimal
+  81:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * intervention of the processor, making CPU available for other operations.
+  82:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  83:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA provides extensive support for XMC microcontroller peripherals like A/D, D/A
+  84:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * converters and timers. Data transfers through communication interfaces (USIC) using the
+  85:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA increase efficiency and parallelism for real-time applications.
+  86:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+  87:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The DMA low level driver provides functions to configure and initialize the GPDMA
+  88:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * hardware peripheral.
+  89:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @{
+  90:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+  91:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  92:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+  93:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * MACROS
+  94:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+  95:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+  96:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA0)
+  97:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0 ((XMC_DMA_t *)GPDMA0_CH0_BASE) /**< DMA module 0 */
+  98:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA0_NUM_CHANNELS 8
+  99:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 100:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 101:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (GPDMA1)
+ 102:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1 ((XMC_DMA_t *)GPDMA1_CH0_BASE) /**< DMA module 1, only available in XMC45xx series
+ 103:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #define XMC_DMA1_NUM_CHANNELS 4
+ 104:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 105:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 106:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 107:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * ENUMS
+ 108:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 109:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 110:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 111:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer types
+ 112:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 113:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_TYPE
+ 114:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 115:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_SINGLE_BLOCK,                                /**< Single block */
+ 116:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_RELOAD, /**< Multi-block: src addre
+ 117:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
+ 118:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_RELOAD,     /**< Multi-block: src addre
+ 119:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_CONTIGUOUS_DSTADR_LINKED, /**< Multi-block: src addre
+ 120:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_RELOAD_DSTADR_LINKED,     /**< Multi-block: src addre
+ 121:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_CONTIGUOUS, /**< Multi-block: src addre
+ 122:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_RELOAD,     /**< Multi-block: src addre
+ 123:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_MULTI_BLOCK_SRCADR_LINKED_DSTADR_LINKED      /**< Multi-block: src addre
+ 124:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_TYPE_t;
+ 125:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 126:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 127:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA transfer flow modes
+ 128:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 129:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_FLOW
+ 130:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 131:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2M_DMA    = 0x0UL, /**< Memory to memory (DMA flow controller) */
+ 132:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_DMA    = 0x1UL, /**< Memory to peripheral (DMA flow controller) */
+ 133:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_DMA    = 0x2UL, /**< Peripheral to memory (DMA flow controller) */
+ 134:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DMA    = 0x3UL, /**< Peripheral to peripheral (DMA flow controller) 
+ 135:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2M_PER    = 0x4UL, /**< Peripheral to memory (Peripheral flow controlle
+ 136:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_SRCPER = 0x5UL, /**< Peripheral to peripheral (Source peripheral flo
+ 137:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_M2P_PER    = 0x6UL, /**< Memory to peripheral (Peripheral flow controlle
+ 138:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_FLOW_P2P_DSTPER = 0x7UL  /**< Peripheral to peripheral (Destination periphera
+ 139:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_FLOW_t;
+ 140:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 141:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 142:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid burst length values
+ 143:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 144:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_BURST_LENGTH
+ 145:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 146:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_1 = 0x0UL, /**< Burst length: 1 word */
+ 147:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_4 = 0x1UL, /**< Burst length: 4 words */
+ 148:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_BURST_LENGTH_8 = 0x2UL  /**< Burst length: 8 words */
+ 149:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_BURST_LENGTH_t;
+ 150:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 151:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 152:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Valid transfer width values
+ 153:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 154:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSFER_WIDTH
+ 155:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 156:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_8  = 0x0UL, /**< 8-bit transfer width */
+ 157:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_16 = 0x1UL, /**< 16-bit transfer width */
+ 158:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_WIDTH_32 = 0x2UL  /**< 32-bit transfer width */
+ 159:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSFER_WIDTH_t;
+ 160:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 161:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 162:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA address count mode
+ 163:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 164:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_ADDRESS_COUNT_MODE
+ 165:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 166:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_INCREMENT = 0x0UL, /**< Address count mode: increment */
+ 167:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_DECREMENT = 0x1UL, /**< Address count mode: decrement */
+ 168:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_ADDRESS_COUNT_MODE_NO_CHANGE = 0x2UL  /**< Address count mode: no change */
+ 169:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_ADDRESS_COUNT_MODE_t;
+ 170:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 171:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 172:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel priorities
+ 173:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 174:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_PRIORITY
+ 175:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 176:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_0 = 0x0UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 0 (low) *
+ 177:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_1 = 0x1UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 1 */
+ 178:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_2 = 0x2UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 2 */
+ 179:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_3 = 0x3UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 3 */
+ 180:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_4 = 0x4UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 4 */
+ 181:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_5 = 0x5UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 5 */
+ 182:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_6 = 0x6UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos, /**< DMA channel priority 6 */
+ 183:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_7 = 0x7UL << GPDMA0_CH_CFGL_CH_PRIOR_Pos  /**< DMA channel priority 7 (high) 
+ 184:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_PRIORITY_t;
+ 185:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 186:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 187:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Source handshake interface
+ 188:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 189:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_SRC_HANDSHAKING
+ 190:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 191:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos, /**< Source: hardwa
+ 192:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_SRC_Pos  /**< Source: softwa
+ 193:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_SRC_HANDSHAKING_t;
+ 194:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 195:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 196:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination handshake interface
+ 197:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 198:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_DST_HANDSHAKING
+ 199:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 200:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_HARDWARE = 0x0UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos, /**< Destination: h
+ 201:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_SOFTWARE = 0x1UL << GPDMA0_CH_CFGL_HS_SEL_DST_Pos  /**< Destination: s
+ 202:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_DST_HANDSHAKING_t;
+ 203:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 204:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 205:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA hardware handshaking interface
+ 206:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Hardware handshaking available only if DMA is flow controller
+ 207:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 208:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_HARDWARE_HANDSHAKING_IF
+ 209:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 210:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_0 = 0x0UL, /**< Hardware handshaking interface 0 */
+ 211:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_1 = 0x1UL, /**< Hardware handshaking interface 1 */
+ 212:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_2 = 0x2UL, /**< Hardware handshaking interface 2 */
+ 213:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_3 = 0x3UL, /**< Hardware handshaking interface 3 */
+ 214:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_4 = 0x4UL, /**< Hardware handshaking interface 4 */
+ 215:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_5 = 0x5UL, /**< Hardware handshaking interface 5 */
+ 216:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_6 = 0x6UL, /**< Hardware handshaking interface 6 */
+ 217:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_7 = 0x7UL  /**< Hardware handshaking interface 7 */
+ 218:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_HARDWARE_HANDSHAKING_IF_t;
+ 219:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 220:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 221:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA events
+ 222:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 223:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_EVENT
+ 224:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 225:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_TRANSFER_COMPLETE        = 0x1UL, /**< Transfer complete event */
+ 226:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE  = 0x2UL, /**< Block transfer complete event */
+ 227:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE = 0x4UL, /**< Source transaction complete event */
+ 228:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE = 0x8UL, /**< Destination transaction complete event */
+ 229:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_EVENT_ERROR                    = 0x10UL /**< DMA error event */
+ 230:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_EVENT_t;
+ 231:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 232:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 233:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Transaction types
+ 234:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 235:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_TRANSACTION_TYPE
+ 236:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 237:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_SINGLE, /**< Single DMA transaction */
+ 238:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSACTION_TYPE_BURST   /**< Burst transaction */
+ 239:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_TRANSACTION_TYPE_t;
+ 240:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 241:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 242:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel status values
+ 243:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 244:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef enum XMC_DMA_CH_STATUS
+ 245:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 246:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_OK,    /**< DMA status OK */
+ 247:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_ERROR, /**< DMA status error */
+ 248:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_STATUS_BUSY   /**< DMA is busy */
+ 249:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_STATUS_t;
+ 250:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 251:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 252:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DATA STRUCTURES
+ 253:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 254:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 255:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 256:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure <br>
+ 257:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 258:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
+ 259:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the DMA channel. It is contained within the ::XMC_DMA_t
+ 260:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * structure. It's registers can be used to configure DMA transfer details
+ 261:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * like source address, destination address, block size, incrementation
+ 262:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * modes and the like.
+ 263:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 264:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  
+ 265:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
+ 266:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SAR;
+ 267:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED0;
+ 268:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DAR;
+ 269:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED1;
+ 270:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LLP;
+ 271:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED2;
+ 272:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLL;
+ 273:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CTLH;
+ 274:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTAT;
+ 275:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED3;
+ 276:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTAT;
+ 277:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED4;
+ 278:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SSTATAR;
+ 279:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED5;
+ 280:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSTATAR;
+ 281:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED6;
+ 282:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGL;
+ 283:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CFGH;
+ 284:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGR;
+ 285:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED7;
+ 286:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DSR;
+ 287:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED8;
+ 288:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } GPDMA_CH_t;
+ 289:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 290:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 291:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA device structure <br>
+ 292:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 293:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The structure represents a collection of all hardware registers used
+ 294:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * to configure the GPDMA peripheral on the XMC4000 series of microcontrollers.
+ 295:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The registers can be accessed with ::XMC_DMA0 and ::XMC_DMA1.
+ 296:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 297:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct {
+ 298:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   GPDMA_CH_t CH[8];
+ 299:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 300:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  RAWCHEV[10];
+ 301:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSCHEV[10];
+ 302:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  MASKCHEV[10];
+ 303:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __O  uint32_t  CLEARCHEV[10];
+ 304:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  STATUSGLEV;
+ 305:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED20;
+ 306:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQSRCREG;
+ 307:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED21;
+ 308:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  REQDSTREG;
+ 309:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED22;
+ 310:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQSRCREG;
+ 311:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED23;
+ 312:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  SGLREQDSTREG;
+ 313:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED24;
+ 314:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTSRCREG;
+ 315:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED25;
+ 316:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  LSTDSTREG;
+ 317:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED26;
+ 318:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  DMACFGREG;
+ 319:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED27;
+ 320:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __IO uint32_t  CHENREG;
+ 321:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED28;
+ 322:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  ID;
+ 323:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  RESERVED29[19];
+ 324:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  TYPE;
+ 325:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   __I  uint32_t  VERSION;
+ 326:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_t;
+ 327:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 328:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard start */
+ 329:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
+ 330:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma push
+ 331:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma anon_unions
+ 332:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
+ 333:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning 586
+ 334:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 335:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 336:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 337:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel linked list item.
+ 338:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Note: Needs to be word aligned
+ 339:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 340:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_LLI
+ 341:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 342:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
+ 343:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
+ 344:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   struct XMC_DMA_LLI *llp;                      /**< Linked list pointer of type XMC_DMA_LLI_t */
+ 345:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 346:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 347:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 348:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 349:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
+ 350:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width */
+ 351:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width */
+ 352:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode */
+ 353:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode */
+ 354:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length */
+ 355:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length */
+ 356:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
+ 357:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
+ 358:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             /**< Reserved bits */
+ 359:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow */
+ 360:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 4;                             /**< Reserved bits */
+ 361:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_linked_list: 1;       /**< Enable destination linked list? */
+ 362:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_linked_list: 1;       /**< Enable source linked list? */
+ 363:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 3;                             /**< Reserved bits */
+ 364:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 365:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
+ 366:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 367:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t block_size;                          /**< Transfer block size */
+ 368:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_status;                          /**< Source status */
+ 369:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_status;                          /**< Destination status */
+ 370:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_LLI_t;
+ 371:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 372:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef XMC_DMA_LLI_t **XMC_DMA_LIST_t;         /**< Type definition for a linked list pointer */
+ 373:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 374:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 375:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel configuration structure
+ 376:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 377:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef struct XMC_DMA_CH_CONFIG
+ 378:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 379:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 380:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 381:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t control;
+ 382:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 383:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 384:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_interrupt: 1;             /**< Enable interrupts? */
+ 385:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_transfer_width: 3;           /**< Destination transfer width */
+ 386:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_transfer_width: 3;           /**< Source transfer width */
+ 387:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_address_count_mode: 2;       /**< Destination address count mode */
+ 388:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_address_count_mode: 2;       /**< Source address count mode */
+ 389:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_burst_length: 3;             /**< Destination burst length */
+ 390:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_burst_length: 3;             /**< Source burst length */
+ 391:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_src_gather: 1;            /**< Enable source gather? */
+ 392:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t enable_dst_scatter: 1;           /**< Enable destination scatter? */
+ 393:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 1;                             
+ 394:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t transfer_flow: 3;                /**< DMA transfer flow */
+ 395:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t : 9;                             
+ 396:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 397:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 398:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 399:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t src_addr;                            /**< Source address */
+ 400:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint32_t dst_addr;                            /**< Destination address */
+ 401:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_LLI_t *linked_list_pointer;           /**< Linked list pointer */
+ 402:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   
+ 403:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 404:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 405:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t src_gather_control;
+ 406:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 407:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 408:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_interval: 20;         /**< Source gather interval */
+ 409:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t src_gather_count: 12;            /**< Source gather count */
+ 410:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 411:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 412:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 413:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   union
+ 414:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   {
+ 415:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     uint32_t dst_scatter_control;
+ 416:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     struct
+ 417:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     {
+ 418:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_interval: 20;        /**< Destination scatter interval */
+ 419:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****       uint32_t dst_scatter_count: 12;           /**< Destination scatter count */
+ 420:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****     };
+ 421:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   };
+ 422:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   
+ 423:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint16_t block_size;                          /**< Block size for DMA controlled transfers [max. 
+ 424:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_TRANSFER_TYPE_t transfer_type;     /**< DMA transfer type */
+ 425:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_PRIORITY_t priority;               /**< DMA channel priority */
+ 426:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_SRC_HANDSHAKING_t src_handshaking; /**< DMA source handshaking interface */
+ 427:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t src_peripheral_request;               /**< Source peripheral request */
+ 428:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   XMC_DMA_CH_DST_HANDSHAKING_t dst_handshaking; /**< DMA destination handshaking interface */
+ 429:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   uint8_t dst_peripheral_request;               /**< Destination peripheral request */
+ 430:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** } XMC_DMA_CH_CONFIG_t;
+ 431:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 432:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /* Anonymous structure/union guard end */
+ 433:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #if defined (__CC_ARM)
+ 434:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma pop
+ 435:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #elif defined (__TASKING__)
+ 436:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   #pragma warning restore
+ 437:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 438:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 439:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 440:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA channel event handler
+ 441:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 442:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** typedef void (*XMC_DMA_CH_EVENT_HANDLER_t)(XMC_DMA_CH_EVENT_t event);
+ 443:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 444:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /*******************************************************************************
+ 445:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * API PROTOTYPES
+ 446:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *******************************************************************************/
+ 447:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 448:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #ifdef __cplusplus
+ 449:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** extern "C" {
+ 450:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** #endif
+ 451:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 452:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 453:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 454:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 455:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 456:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 457:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Initialize the GPDMA peripheral <br>
+ 458:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 459:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 460:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function initializes a prioritized list of DMA channels and enables the GPDMA
+ 461:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral.
+ 462:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 463:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Init(XMC_DMA_t *const dma);
+ 464:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 465:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 466:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 467:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 468:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 469:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 470:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Enable the GPDMA peripheral <br>
+ 471:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 472:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 473:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function de-asserts the GPDMA peripheral reset. In addition, it un-gates the
+ 474:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * GPDMA0 peripheral clock for all XMC4000 series of microcontrollers with an exception
+ 475:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * of the XMC4500 microcontroller. The XMC4500 doesn't support gating.
+ 476:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 477:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Enable(XMC_DMA_t *const dma);
+ 478:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 479:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 480:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 481:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return None
+ 482:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 483:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 484:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Disable the GPDMA peripheral <br>
+ 485:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 486:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 487:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function asserts the GPDMA peripheral reset. In addition, it gates the GPDMA0
+ 488:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * peripheral clock for all XMC4000 series of microcontrollers with an exception of
+ 489:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * the XMC4500 microcontroller. The XMC4500 doesn't support gating.
+ 490:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 491:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** void XMC_DMA_Disable(XMC_DMA_t *const dma);
+ 492:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 493:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 494:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 495:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return bool
+ 496:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 497:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 498:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Check if the GPDMA peripheral is enabled <br>
+ 499:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 500:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 501:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * For the XMC4500 microcontroller, the function checks if the GPDMA module is asserted
+ 502:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * and returns "false" if it is. In addition, it also checks if the clock is gated
+ 503:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * for the other XMC4000 series of microcontrollers. It returns "true" if the peripheral
+ 504:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * is enabled.
+ 505:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 506:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** bool XMC_DMA_IsEnabled(const XMC_DMA_t *const dma);
+ 507:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 508:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 509:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 510:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 511:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 512:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 513:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA event status <br>
+ 514:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 515:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 516:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the collective (global) status of GPDMA events. The following
+ 517:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * lists the various DMA events and their corresponding enumeration. The return value
+ 518:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * of this function may then be masked with any one of the following enumerations to
+ 519:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * obtain the status of individual DMA events. <br>
+ 520:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 521:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 522:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Transfer complete -> ::XMC_DMA_CH_EVENT_TRANSFER_COMPLETE                       <br>
+ 523:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Block transfer complete -> ::XMC_DMA_CH_EVENT_BLOCK_TRANSFER_COMPLETE           <br>
+ 524:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Source transaction complete -> ::XMC_DMA_CH_EVENT_SRC_TRANSACTION_COMPLETE      <br>
+ 525:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Destination transaction complete -> ::XMC_DMA_CH_EVENT_DST_TRANSACTION_COMPLETE <br>
+ 526:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * DMA error event -> ::XMC_DMA_CH_EVENT_ERROR                                     <br>
+ 527:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 528:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetEventStatus(XMC_DMA_t *const dma)
+ 529:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
   27              	 .loc 1 529 0
   28              	 .cfi_startproc
   29              	 
@@ -568,11 +568,11 @@
   40              	.LCFI2:
   41              	 .cfi_def_cfa_register 7
   42 0006 7860     	 str r0,[r7,#4]
- 530:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSGLEV);
+ 530:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSGLEV);
   43              	 .loc 1 530 0
   44 0008 7B68     	 ldr r3,[r7,#4]
   45 000a D3F86033 	 ldr r3,[r3,#864]
- 531:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 531:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
   46              	 .loc 1 531 0
   47 000e 1846     	 mov r0,r3
   48 0010 0C37     	 adds r7,r7,#12
@@ -595,19 +595,19 @@
   66              	 .thumb_func
   68              	XMC_DMA_GetChannelsTransferCompleteStatus:
   69              	.LFB129:
- 532:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 533:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 534:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 535:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA transfer complete status
- 536:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 537:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 538:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get transfer complete status <br>
- 539:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 540:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 541:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA transfer complete interrupt status. <br>
- 542:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 543:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsTransferCompleteStatus(XMC_DMA_t *const dma)
- 544:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 532:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 533:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 534:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 535:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA transfer complete status
+ 536:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 537:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 538:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get transfer complete status <br>
+ 539:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 540:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 541:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA transfer complete interrupt status. <br>
+ 542:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 543:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsTransferCompleteStatus(XMC_DMA_t *const dma)
+ 544:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
   70              	 .loc 1 544 0
   71              	 .cfi_startproc
   72              	 
@@ -624,11 +624,11 @@
   83              	.LCFI8:
   84              	 .cfi_def_cfa_register 7
   85 0006 7860     	 str r0,[r7,#4]
- 545:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[0]);
+ 545:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[0]);
   86              	 .loc 1 545 0
   87 0008 7B68     	 ldr r3,[r7,#4]
   88 000a D3F8E832 	 ldr r3,[r3,#744]
- 546:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 546:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
   89              	 .loc 1 546 0
   90 000e 1846     	 mov r0,r3
   91 0010 0C37     	 adds r7,r7,#12
@@ -651,19 +651,19 @@
  109              	 .thumb_func
  111              	XMC_DMA_GetChannelsBlockCompleteStatus:
  112              	.LFB130:
- 547:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 548:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 549:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 550:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA block complete status
- 551:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 552:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 553:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get block transfer complete status <br>
- 554:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 555:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 556:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA block transfer complete interrupt status. <br>
- 557:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 558:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsBlockCompleteStatus(XMC_DMA_t *const dma)
- 559:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 547:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 548:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 549:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 550:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA block complete status
+ 551:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 552:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 553:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get block transfer complete status <br>
+ 554:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 555:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 556:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns GPDMA block transfer complete interrupt status. <br>
+ 557:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 558:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsBlockCompleteStatus(XMC_DMA_t *const dma)
+ 559:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
  113              	 .loc 1 559 0
  114              	 .cfi_startproc
  115              	 
@@ -680,11 +680,11 @@
  126              	.LCFI14:
  127              	 .cfi_def_cfa_register 7
  128 0006 7860     	 str r0,[r7,#4]
- 560:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[2]);
+ 560:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[2]);
  129              	 .loc 1 560 0
  130 0008 7B68     	 ldr r3,[r7,#4]
  131 000a D3F8F032 	 ldr r3,[r3,#752]
- 561:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 561:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
  132              	 .loc 1 561 0
  133 000e 1846     	 mov r0,r3
  134 0010 0C37     	 adds r7,r7,#12
@@ -707,23 +707,23 @@
  152              	 .thumb_func
  154              	XMC_DMA_GetChannelsSourceTransactionCompleteStatus:
  155              	.LFB131:
- 562:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 563:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 564:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 565:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 566:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 567:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 568:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get source transaction complete status <br>
- 569:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 570:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 571:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the source transaction complete interrupt status. <br>
- 572:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 573:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
- 574:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * If the source peripheral is memory, the source transaction complete interrupt is
- 575:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * ignored.
- 576:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 577:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsSourceTransactionCompleteStatus(XMC_DMA_t *const dma)
- 578:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 562:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 563:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 564:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 565:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 566:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 567:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 568:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get source transaction complete status <br>
+ 569:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 570:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 571:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the source transaction complete interrupt status. <br>
+ 572:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 573:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
+ 574:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * If the source peripheral is memory, the source transaction complete interrupt is
+ 575:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * ignored.
+ 576:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 577:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsSourceTransactionCompleteStatus(XMC_DMA_t *const dma)
+ 578:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
  156              	 .loc 1 578 0
  157              	 .cfi_startproc
  158              	 
@@ -740,11 +740,11 @@
  169              	.LCFI20:
  170              	 .cfi_def_cfa_register 7
  171 0006 7860     	 str r0,[r7,#4]
- 579:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[4]);
+ 579:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[4]);
  172              	 .loc 1 579 0
  173 0008 7B68     	 ldr r3,[r7,#4]
  174 000a D3F8F832 	 ldr r3,[r3,#760]
- 580:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 580:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
  175              	 .loc 1 580 0
  176 000e 1846     	 mov r0,r3
  177 0010 0C37     	 adds r7,r7,#12
@@ -767,23 +767,23 @@
  195              	 .thumb_func
  197              	XMC_DMA_GetChannelsDestinationTransactionCompleteStatus:
  198              	.LFB132:
- 581:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 582:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 583:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 584:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
- 585:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 586:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 587:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get destination transaction complete status <br>
- 588:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 589:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 590:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the destination transaction complete interrupt status <br>
- 591:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 592:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
- 593:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * If the destination peripheral is memory, the destination transaction complete
- 594:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * interrupt is ignored.
- 595:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 596:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsDestinationTransactionCompleteStatus(XMC_DMA_t *const d
- 597:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 581:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 582:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 583:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 584:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA event status
+ 585:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 586:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 587:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get destination transaction complete status <br>
+ 588:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 589:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 590:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns the destination transaction complete interrupt status <br>
+ 591:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 592:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Note: </b><br>
+ 593:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * If the destination peripheral is memory, the destination transaction complete
+ 594:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * interrupt is ignored.
+ 595:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 596:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsDestinationTransactionCompleteStatus(XMC_DMA_t *const d
+ 597:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
  199              	 .loc 1 597 0
  200              	 .cfi_startproc
  201              	 
@@ -800,11 +800,11 @@
  212              	.LCFI26:
  213              	 .cfi_def_cfa_register 7
  214 0006 7860     	 str r0,[r7,#4]
- 598:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[6]);
+ 598:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[6]);
  215              	 .loc 1 598 0
  216 0008 7B68     	 ldr r3,[r7,#4]
  217 000a D3F80033 	 ldr r3,[r3,#768]
- 599:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 599:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
  218              	 .loc 1 599 0
  219 000e 1846     	 mov r0,r3
  220 0010 0C37     	 adds r7,r7,#12
@@ -827,19 +827,19 @@
  238              	 .thumb_func
  240              	XMC_DMA_GetChannelsErrorStatus:
  241              	.LFB133:
- 600:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** 
- 601:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** /**
- 602:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
- 603:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA error event status
- 604:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 605:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
- 606:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA error event status <br>
- 607:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  *
- 608:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
- 609:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns error interrupt status. <br>
- 610:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****  */
- 611:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsErrorStatus(XMC_DMA_t *const dma)
- 612:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** {
+ 600:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** 
+ 601:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** /**
+ 602:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @param dma A constant pointer to XMC_DMA_t, pointing to the GPDMA base address
+ 603:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * @return uint32_t DMA error event status
+ 604:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 605:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par<b>Description: </b><br>
+ 606:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * Get DMA error event status <br>
+ 607:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  *
+ 608:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * \par
+ 609:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  * The function returns error interrupt status. <br>
+ 610:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****  */
+ 611:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** __STATIC_INLINE uint32_t XMC_DMA_GetChannelsErrorStatus(XMC_DMA_t *const dma)
+ 612:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** {
  242              	 .loc 1 612 0
  243              	 .cfi_startproc
  244              	 
@@ -856,11 +856,11 @@
  255              	.LCFI32:
  256              	 .cfi_def_cfa_register 7
  257 0006 7860     	 str r0,[r7,#4]
- 613:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[8]);
+ 613:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h ****   return (dma->STATUSCHEV[8]);
  258              	 .loc 1 613 0
  259 0008 7B68     	 ldr r3,[r7,#4]
  260 000a D3F80833 	 ldr r3,[r3,#776]
- 614:C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc\xmc_dma.h **** }
+ 614:C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc\xmc_dma.h **** }
  261              	 .loc 1 614 0
  262 000e 1846     	 mov r0,r3
  263 0010 0C37     	 adds r7,r7,#12
@@ -4736,10 +4736,10 @@
  3389              	.Letext0:
  3390              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
  3391              	 .file 4 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
- 3392              	 .file 5 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
- 3393              	 .file 6 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc/xmc4_scu.h"
- 3394              	 .file 7 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Include/core_cm4.h"
- 3395              	 .file 8 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+ 3392              	 .file 5 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+ 3393              	 .file 6 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/XMCLib/inc/xmc4_scu.h"
+ 3394              	 .file 7 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/CMSIS/Include/core_cm4.h"
+ 3395              	 .file 8 "C:/Users/Mafish/Documents/GitHub/MAB_Driver/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
 DEFINED SYMBOLS
                             *ABS*:00000000 xmc_dma.c
     {standard input}:20     .text.XMC_DMA_GetEventStatus:00000000 $t

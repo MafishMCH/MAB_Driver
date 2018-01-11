@@ -10,7 +10,7 @@ uint8_t adress = 0;
 uint8_t init = 0;
 int8_t znak = 0;
 uint32_t is_delay = 1;
-
+uint32_t zmienna_testowa_do_githuba;
 /*000000000
  * 			Zmienne związane z obsługą RS485
  */
