@@ -1,0 +1,668 @@
+   1              	 .syntax unified
+   2              	 .cpu cortex-m4
+   3              	 .eabi_attribute 27,3
+   4              	 .fpu fpv4-sp-d16
+   5              	 .eabi_attribute 20,1
+   6              	 .eabi_attribute 21,1
+   7              	 .eabi_attribute 23,3
+   8              	 .eabi_attribute 24,1
+   9              	 .eabi_attribute 25,1
+  10              	 .eabi_attribute 26,1
+  11              	 .eabi_attribute 30,6
+  12              	 .eabi_attribute 34,1
+  13              	 .eabi_attribute 18,4
+  14              	 .thumb
+  15              	 .file "adc_queue_conf.c"
+  16              	 .text
+  17              	.Ltext0:
+  18              	 .cfi_sections .debug_frame
+  19              	 .global ADC_QUEUE_0_reqsrc_config_0
+  20              	 .section .rodata.ADC_QUEUE_0_reqsrc_config_0,"a",%progbits
+  21              	 .align 2
+  24              	ADC_QUEUE_0_reqsrc_config_0:
+  25 0000 13000000 	 .word 19
+  26 0004 02000000 	 .word 2
+  27 0008 00000000 	 .word 0
+  28 000c 01       	 .byte 1
+  29 000d 000000   	 .space 3
+  30              	 .global ADC_QUEUE_0_init_config_0
+  31              	 .section .rodata.ADC_QUEUE_0_init_config_0,"a",%progbits
+  32              	 .align 2
+  35              	ADC_QUEUE_0_init_config_0:
+  36 0000 0C       	 .byte 12
+  37 0001 000000   	 .space 3
+  38 0004 00       	 .space 1
+  39 0005 48       	 .byte 72
+  40 0006 00       	 .byte 0
+  41 0007 00       	 .byte 0
+  42 0008 04       	 .byte 4
+  43 0009 000000   	 .space 3
+  44              	 .global ADC_QUEUE_0
+  45              	 .section .data.ADC_QUEUE_0,"aw",%progbits
+  46              	 .align 2
+  49              	ADC_QUEUE_0:
+  50 0000 10       	 .byte 16
+  51 0001 00       	 .byte 0
+  52 0002 0000     	 .space 2
+  53 0004 00000000 	 .word ADC_QUEUE_0_init_config_0
+  54 0008 00000000 	 .word GLOBAL_ADC_0
+  55 000c 00440040 	 .word 1073759232
+  56 0010 01       	 .byte 1
+  57 0011 000000   	 .space 3
+  58 0014 00000000 	 .word ADC_QUEUE_0_reqsrc_config_0
+  59 0018 01       	 .byte 1
+  60 0019 02       	 .byte 2
+  61 001a 00       	 .byte 0
+  62 001b 00       	 .byte 0
+  63 001c 00       	 .byte 0
+  64 001d 000000   	 .space 3
+  65              	 .comm adc_queue_list_ch_index_0,96,4
+  66              	 .comm adc_queue_list_pos_index_0,96,4
+  67              	 .global ADC_QUEUE_1_reqsrc_config_1
+  68              	 .section .rodata.ADC_QUEUE_1_reqsrc_config_1,"a",%progbits
+  69              	 .align 2
+  72              	ADC_QUEUE_1_reqsrc_config_1:
+  73 0000 19000000 	 .word 25
+  74 0004 02000000 	 .word 2
+  75 0008 00000000 	 .word 0
+  76 000c 01       	 .byte 1
+  77 000d 000000   	 .space 3
+  78              	 .global ADC_QUEUE_1_init_config_1
+  79              	 .section .rodata.ADC_QUEUE_1_init_config_1,"a",%progbits
+  80              	 .align 2
+  83              	ADC_QUEUE_1_init_config_1:
+  84 0000 0C       	 .byte 12
+  85 0001 000000   	 .space 3
+  86 0004 00       	 .space 1
+  87 0005 48       	 .byte 72
+  88 0006 00       	 .byte 0
+  89 0007 00       	 .byte 0
+  90 0008 04       	 .byte 4
+  91 0009 000000   	 .space 3
+  92              	 .global ADC_QUEUE_1
+  93              	 .section .data.ADC_QUEUE_1,"aw",%progbits
+  94              	 .align 2
+  97              	ADC_QUEUE_1:
+  98 0000 10       	 .byte 16
+  99 0001 00       	 .byte 0
+ 100 0002 0000     	 .space 2
+ 101 0004 00000000 	 .word ADC_QUEUE_1_init_config_1
+ 102 0008 00000000 	 .word GLOBAL_ADC_0
+ 103 000c 00480040 	 .word 1073760256
+ 104 0010 01       	 .byte 1
+ 105 0011 000000   	 .space 3
+ 106 0014 00000000 	 .word ADC_QUEUE_1_reqsrc_config_1
+ 107 0018 03       	 .byte 3
+ 108 0019 02       	 .byte 2
+ 109 001a 01       	 .byte 1
+ 110 001b 00       	 .byte 0
+ 111 001c 01       	 .byte 1
+ 112 001d 000000   	 .space 3
+ 113              	 .comm adc_queue_list_ch_index_1,96,4
+ 114              	 .comm adc_queue_list_pos_index_1,96,4
+ 115              	 .global ADC_QUEUE_2_reqsrc_config_2
+ 116              	 .section .rodata.ADC_QUEUE_2_reqsrc_config_2,"a",%progbits
+ 117              	 .align 2
+ 120              	ADC_QUEUE_2_reqsrc_config_2:
+ 121 0000 1A000000 	 .word 26
+ 122 0004 02000000 	 .word 2
+ 123 0008 00000000 	 .word 0
+ 124 000c 01       	 .byte 1
+ 125 000d 000000   	 .space 3
+ 126              	 .global ADC_QUEUE_2_init_config_2
+ 127              	 .section .rodata.ADC_QUEUE_2_init_config_2,"a",%progbits
+ 128              	 .align 2
+ 131              	ADC_QUEUE_2_init_config_2:
+ 132 0000 0C       	 .byte 12
+ 133 0001 000000   	 .space 3
+ 134 0004 00       	 .space 1
+ 135 0005 48       	 .byte 72
+ 136 0006 00       	 .byte 0
+ 137 0007 00       	 .byte 0
+ 138 0008 04       	 .byte 4
+ 139 0009 000000   	 .space 3
+ 140              	 .global ADC_QUEUE_2
+ 141              	 .section .data.ADC_QUEUE_2,"aw",%progbits
+ 142              	 .align 2
+ 145              	ADC_QUEUE_2:
+ 146 0000 10       	 .byte 16
+ 147 0001 00       	 .byte 0
+ 148 0002 0000     	 .space 2
+ 149 0004 00000000 	 .word ADC_QUEUE_2_init_config_2
+ 150 0008 00000000 	 .word GLOBAL_ADC_0
+ 151 000c 004C0040 	 .word 1073761280
+ 152 0010 01       	 .byte 1
+ 153 0011 000000   	 .space 3
+ 154 0014 00000000 	 .word ADC_QUEUE_2_reqsrc_config_2
+ 155 0018 00       	 .byte 0
+ 156 0019 02       	 .byte 2
+ 157 001a 02       	 .byte 2
+ 158 001b 00       	 .byte 0
+ 159 001c 02       	 .byte 2
+ 160 001d 000000   	 .space 3
+ 161              	 .comm adc_queue_list_ch_index_2,96,4
+ 162              	 .comm adc_queue_list_pos_index_2,96,4
+ 163              	 .section .text.VADC0_G0_1_IRQHandler,"ax",%progbits
+ 164              	 .align 2
+ 165              	 .global VADC0_G0_1_IRQHandler
+ 166              	 .thumb
+ 167              	 .thumb_func
+ 169              	VADC0_G0_1_IRQHandler:
+ 170              	.LFB243:
+ 171              	 .file 1 "../Dave/Generated/ADC_QUEUE/adc_queue_conf.c"
+   1:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**************************************************************************************************
+   2:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** * DAVE APP Name : ADC_QUEUE       APP Version: 4.0.20
+   3:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** *
+   4:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** * NOTE:
+   5:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** * This file is generated by DAVE. Any manual modification done to this file will be lost when the c
+   6:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ***************************************************************************************************
+   7:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+   8:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+   9:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * @cond
+  10:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  **************************************************************************************************
+  11:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  12:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * Copyright (c) 2015-2016, Infineon Technologies AG
+  13:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * All rights reserved.
+  14:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  15:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * Redistribution and use in source and binary forms, with or without modification,are permitted pr
+  16:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * following conditions are met:
+  17:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  18:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   Redistributions of source code must retain the above copyright notice, this list of conditions
+  19:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   disclaimer.
+  20:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  21:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   Redistributions in binary form must reproduce the above copyright notice, this list of conditi
+  22:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   following disclaimer in the documentation and/or other materials provided with the distributio
+  23:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  24:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   Neither the name of the copyright holders nor the names of its contributors may be used to end
+  25:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *   products derived from this software without specific prior written permission.
+  26:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  27:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR I
+  28:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTI
+  29:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE  FOR ANY DIRECT, IN
+  30:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBS
+  31:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THE
+  32:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * WHETHER IN CONTRACT, STRICT LIABILITY,OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY
+  33:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+  34:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  35:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * To improve the quality of the software, users are encouraged to share modifications, enhancement
+  36:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * with Infineon Technologies AG (dave@infineon.com).
+  37:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  **************************************************************************************************
+  38:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  39:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * Change History
+  40:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * --------------
+  41:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  42:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-02-16:
+  43:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Initial version for DAVEv4.<BR>
+  44:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  45:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-04-27:
+  46:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Optimized the ADC_QUEUE_AllEntriesInserted.<BR>
+  47:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  48:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-06-20:
+  49:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Updated the copyright section.<BR>
+  50:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *    
+  51:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-06-26:
+  52:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Added flushing of all the queue entries before inserting to the Hardware buffer.<BR>
+  53:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  54:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-07-09:
+  55:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Documentation updated.<BR>
+  56:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  57:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-07-31:
+  58:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Updated the APP to support new devices.<BR>
+  59:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  60:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-10-01:
+  61:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Iclass signal added to the APP.<BR>
+  62:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  63:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-10-08:
+  64:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Added support for XMC4700/XMC4800 devices.<BR>
+  65:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  66:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2015-12-15:     
+  67:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *          - Added support for XMC4300 devices.<BR>
+  68:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *          - Updated the APP to optimize the request source callback.<BR>
+  69:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *          - APIs touched are ADC_QUEUE_InsertQueueEntry(), ADC_QUEUE_ResetListContents(), 
+  70:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *            ADC_QUEUE_ReqSrcEventHandler().<BR>       
+  71:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  72:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2016-01-19:
+  73:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *          - Added new APIs ADC_QUEUE_EnableArbitration() and ADC_QUEUE_DisableArbitration().<BR>
+  74:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  75:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2016-04-03:
+  76:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *          - Total conversion time now includes post calibration time as well for XMC1x.<BR>
+  77:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  78:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * 2016-08-18:
+  79:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *     - Minimum sample time at low frequencies changed to incorporate Errata ADC_AI.H006 and ADC_A
+  80:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  81:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * @endcond
+  82:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *
+  83:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+  84:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+  85:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**************************************************************************************************
+  86:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * HEADER FILES                                                                                    
+  87:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  **************************************************************************************************
+  88:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** #include "adc_queue.h"
+  89:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+  90:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**************************************************************************************************
+  91:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * DATA STRUCTURES
+  92:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  **************************************************************************************************
+  93:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+  94:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * @ingroup ADC_QUEUE_datastructures
+  95:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * @{
+  96:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+  97:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+  98:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+  99:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE ISR Handle for ADC_QUEUE_0
+ 100:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 101:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const ADC_QUEUE_ISR_t ADC_QUEUE_0_reqsrc_config_0 =
+ 102:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 103:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .node_id          = 19U,
+ 104:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .priority         = 2U,
+ 105:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .sub_priority     = 0U,
+ 106:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .interrupt_enable = (bool)true 
+ 107:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 108:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 109:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 110:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC QUEUE LLD Handle for configuring the ADC_QUEUE_0
+ 111:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 112:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_0_init_config_0 =
+ 113:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 114:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .conv_start_mode  = (uint32_t) XMC_VADC_STARTMODE_WFS, 		/* Conversion start mode WFS/CIR/CNR*/
+ 115:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .req_src_priority = (uint32_t) XMC_VADC_GROUP_RS_PRIORITY_3, /*The queue request source priority 
+ 116:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_signal   = (uint32_t) XMC_VADC_REQ_TR_I, 			/*If trigger needed the signal input*/
+ 117:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_edge     = (uint32_t) XMC_VADC_TRIGGER_EDGE_RISING,   /*Trigger edge needed if trigger e
+ 118:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gate_signal      = (uint32_t) XMC_VADC_REQ_GT_A,            /*If gating needed the signal input*
+ 119:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .timer_mode       = (uint32_t) 0,                            /* Disabled equidistant sampling*/
+ 120:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .external_trigger = (uint32_t) 1 						/*External trigger Enabled/Disabled*/  
+ 121:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 122:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 123:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 124:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE Handle for configuring the ADC_QUEUE_0
+ 125:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 126:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_t ADC_QUEUE_0 =
+ 127:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 128:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_config_handle = {
+ 129:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+ 130:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /
+ 131:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                           },
+ 132:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G0, /* Group pointer for ADC_QUEUE_0*/
+ 133:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .queue_config_handle  = (XMC_VADC_QUEUE_CONFIG_t*) &ADC_QUEUE_0_init_config_0, /* Queue configura
+ 134:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .global_handle        = (GLOBAL_ADC_t *) &GLOBAL_ADC_0, /*The GLOBAL_ADC App handle*/ 
+ 135:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .rs_intr_handle       = (ADC_QUEUE_ISR_t*) &ADC_QUEUE_0_reqsrc_config_0, /* The request source in
+ 136:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gating_mode          = XMC_VADC_GATEMODE_IGNORE,     /*Gating edge needed if gate enabled*/
+ 137:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .srv_req_node         = XMC_VADC_SR_GROUP_SR1, /*Service Request line for Request source Event */
+ 138:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .init_status			= ADC_QUEUE_UNINITIALIZED, /* ADC_QUEUE_0 INIT status*/
+ 139:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .instance_number      = (uint8_t) 0,   /* APP Instance number for ADC_QUEUE_0*/
+ 140:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_num           = (uint8_t) 0,   /* The selected ICLASS configuration for ADC_QUEUE_0*/
+ 141:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_index          = (uint8_t) 0    /* The Group index for ADC_QUEUE_0*/
+ 142:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 143:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 144:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_ch_index_0[ADC_QUEUE_NUM_CHANNELS];
+ 145:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_pos_index_0[ADC_QUEUE_NUM_CHANNELS];
+ 146:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 147:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *@}
+ 148:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 149:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 150:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 151:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 152:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE ISR Handle for ADC_QUEUE_1
+ 153:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 154:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const ADC_QUEUE_ISR_t ADC_QUEUE_1_reqsrc_config_1 =
+ 155:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 156:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .node_id          = 25U,
+ 157:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .priority         = 2U,
+ 158:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .sub_priority     = 0U,
+ 159:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .interrupt_enable = (bool)true 
+ 160:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 161:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 162:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 163:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC QUEUE LLD Handle for configuring the ADC_QUEUE_1
+ 164:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 165:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_1_init_config_1 =
+ 166:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 167:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .conv_start_mode  = (uint32_t) XMC_VADC_STARTMODE_WFS, 		/* Conversion start mode WFS/CIR/CNR*/
+ 168:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .req_src_priority = (uint32_t) XMC_VADC_GROUP_RS_PRIORITY_3, /*The queue request source priority 
+ 169:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_signal   = (uint32_t) XMC_VADC_REQ_TR_I, 			/*If trigger needed the signal input*/
+ 170:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_edge     = (uint32_t) XMC_VADC_TRIGGER_EDGE_RISING,   /*Trigger edge needed if trigger e
+ 171:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gate_signal      = (uint32_t) XMC_VADC_REQ_GT_A,            /*If gating needed the signal input*
+ 172:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .timer_mode       = (uint32_t) 0,                            /* Disabled equidistant sampling*/
+ 173:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .external_trigger = (uint32_t) 1 						/*External trigger Enabled/Disabled*/  
+ 174:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 175:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 176:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 177:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE Handle for configuring the ADC_QUEUE_1
+ 178:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 179:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_t ADC_QUEUE_1 =
+ 180:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 181:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_config_handle = {
+ 182:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+ 183:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /
+ 184:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                           },
+ 185:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G1, /* Group pointer for ADC_QUEUE_1*/
+ 186:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .queue_config_handle  = (XMC_VADC_QUEUE_CONFIG_t*) &ADC_QUEUE_1_init_config_1, /* Queue configura
+ 187:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .global_handle        = (GLOBAL_ADC_t *) &GLOBAL_ADC_0, /*The GLOBAL_ADC App handle*/ 
+ 188:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .rs_intr_handle       = (ADC_QUEUE_ISR_t*) &ADC_QUEUE_1_reqsrc_config_1, /* The request source in
+ 189:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gating_mode          = XMC_VADC_GATEMODE_IGNORE,     /*Gating edge needed if gate enabled*/
+ 190:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .srv_req_node         = XMC_VADC_SR_GROUP_SR3, /*Service Request line for Request source Event */
+ 191:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .init_status			= ADC_QUEUE_UNINITIALIZED, /* ADC_QUEUE_1 INIT status*/
+ 192:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .instance_number      = (uint8_t) 1,   /* APP Instance number for ADC_QUEUE_1*/
+ 193:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_num           = (uint8_t) 0,   /* The selected ICLASS configuration for ADC_QUEUE_1*/
+ 194:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_index          = (uint8_t) 1    /* The Group index for ADC_QUEUE_1*/
+ 195:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 196:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 197:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_ch_index_1[ADC_QUEUE_NUM_CHANNELS];
+ 198:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_pos_index_1[ADC_QUEUE_NUM_CHANNELS];
+ 199:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 200:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *@}
+ 201:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 202:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 203:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 204:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 205:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE ISR Handle for ADC_QUEUE_2
+ 206:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 207:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const ADC_QUEUE_ISR_t ADC_QUEUE_2_reqsrc_config_2 =
+ 208:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 209:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .node_id          = 26U,
+ 210:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .priority         = 2U,
+ 211:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .sub_priority     = 0U,
+ 212:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .interrupt_enable = (bool)true 
+ 213:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 214:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 215:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 216:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC QUEUE LLD Handle for configuring the ADC_QUEUE_2
+ 217:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 218:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_2_init_config_2 =
+ 219:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 220:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .conv_start_mode  = (uint32_t) XMC_VADC_STARTMODE_WFS, 		/* Conversion start mode WFS/CIR/CNR*/
+ 221:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .req_src_priority = (uint32_t) XMC_VADC_GROUP_RS_PRIORITY_3, /*The queue request source priority 
+ 222:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_signal   = (uint32_t) XMC_VADC_REQ_TR_I, 			/*If trigger needed the signal input*/
+ 223:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .trigger_edge     = (uint32_t) XMC_VADC_TRIGGER_EDGE_RISING,   /*Trigger edge needed if trigger e
+ 224:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gate_signal      = (uint32_t) XMC_VADC_REQ_GT_A,            /*If gating needed the signal input*
+ 225:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .timer_mode       = (uint32_t) 0,                            /* Disabled equidistant sampling*/
+ 226:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .external_trigger = (uint32_t) 1 						/*External trigger Enabled/Disabled*/  
+ 227:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 228:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 229:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 230:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * ADC_QUEUE Handle for configuring the ADC_QUEUE_2
+ 231:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 232:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_t ADC_QUEUE_2 =
+ 233:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 234:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_config_handle = {
+ 235:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+ 236:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /
+ 237:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****                           },
+ 238:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G2, /* Group pointer for ADC_QUEUE_2*/
+ 239:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .queue_config_handle  = (XMC_VADC_QUEUE_CONFIG_t*) &ADC_QUEUE_2_init_config_2, /* Queue configura
+ 240:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .global_handle        = (GLOBAL_ADC_t *) &GLOBAL_ADC_0, /*The GLOBAL_ADC App handle*/ 
+ 241:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .rs_intr_handle       = (ADC_QUEUE_ISR_t*) &ADC_QUEUE_2_reqsrc_config_2, /* The request source in
+ 242:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .gating_mode          = XMC_VADC_GATEMODE_IGNORE,     /*Gating edge needed if gate enabled*/
+ 243:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .srv_req_node         = XMC_VADC_SR_GROUP_SR0, /*Service Request line for Request source Event */
+ 244:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .init_status			= ADC_QUEUE_UNINITIALIZED, /* ADC_QUEUE_2 INIT status*/
+ 245:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .instance_number      = (uint8_t) 2,   /* APP Instance number for ADC_QUEUE_2*/
+ 246:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .iclass_num           = (uint8_t) 0,   /* The selected ICLASS configuration for ADC_QUEUE_2*/
+ 247:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   .group_index          = (uint8_t) 2    /* The Group index for ADC_QUEUE_2*/
+ 248:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** };
+ 249:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 250:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_ch_index_2[ADC_QUEUE_NUM_CHANNELS];
+ 251:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** ADC_QUEUE_ENTRY_t adc_queue_list_pos_index_2[ADC_QUEUE_NUM_CHANNELS];
+ 252:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 253:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  *@}
+ 254:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 255:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 256:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 257:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 258:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * This function invokes the Request source handler for ADC_QUEUE_0
+ 259:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 260:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** void ADC_QUEUE_0_ReqSrcEventHandler(void)
+ 261:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 172              	 .loc 1 261 0
+ 173              	 .cfi_startproc
+ 174              	 
+ 175              	 
+ 176 0000 80B5     	 push {r7,lr}
+ 177              	.LCFI0:
+ 178              	 .cfi_def_cfa_offset 8
+ 179              	 .cfi_offset 7,-8
+ 180              	 .cfi_offset 14,-4
+ 181 0002 00AF     	 add r7,sp,#0
+ 182              	.LCFI1:
+ 183              	 .cfi_def_cfa_register 7
+ 262:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   ADC_QUEUE_ReqSrcEventHandler(&ADC_QUEUE_0);
+ 184              	 .loc 1 262 0
+ 185 0004 0148     	 ldr r0,.L2
+ 186 0006 FFF7FEFF 	 bl ADC_QUEUE_ReqSrcEventHandler
+ 263:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** }
+ 187              	 .loc 1 263 0
+ 188 000a 80BD     	 pop {r7,pc}
+ 189              	.L3:
+ 190              	 .align 2
+ 191              	.L2:
+ 192 000c 00000000 	 .word ADC_QUEUE_0
+ 193              	 .cfi_endproc
+ 194              	.LFE243:
+ 196              	 .section .text.VADC0_G1_3_IRQHandler,"ax",%progbits
+ 197              	 .align 2
+ 198              	 .global VADC0_G1_3_IRQHandler
+ 199              	 .thumb
+ 200              	 .thumb_func
+ 202              	VADC0_G1_3_IRQHandler:
+ 203              	.LFB244:
+ 264:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 265:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 266:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 267:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * This function invokes the Request source handler for ADC_QUEUE_1
+ 268:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 269:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** void ADC_QUEUE_1_ReqSrcEventHandler(void)
+ 270:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 204              	 .loc 1 270 0
+ 205              	 .cfi_startproc
+ 206              	 
+ 207              	 
+ 208 0000 80B5     	 push {r7,lr}
+ 209              	.LCFI2:
+ 210              	 .cfi_def_cfa_offset 8
+ 211              	 .cfi_offset 7,-8
+ 212              	 .cfi_offset 14,-4
+ 213 0002 00AF     	 add r7,sp,#0
+ 214              	.LCFI3:
+ 215              	 .cfi_def_cfa_register 7
+ 271:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   ADC_QUEUE_ReqSrcEventHandler(&ADC_QUEUE_1);
+ 216              	 .loc 1 271 0
+ 217 0004 0148     	 ldr r0,.L5
+ 218 0006 FFF7FEFF 	 bl ADC_QUEUE_ReqSrcEventHandler
+ 272:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** }
+ 219              	 .loc 1 272 0
+ 220 000a 80BD     	 pop {r7,pc}
+ 221              	.L6:
+ 222              	 .align 2
+ 223              	.L5:
+ 224 000c 00000000 	 .word ADC_QUEUE_1
+ 225              	 .cfi_endproc
+ 226              	.LFE244:
+ 228              	 .section .text.VADC0_G2_0_IRQHandler,"ax",%progbits
+ 229              	 .align 2
+ 230              	 .global VADC0_G2_0_IRQHandler
+ 231              	 .thumb
+ 232              	 .thumb_func
+ 234              	VADC0_G2_0_IRQHandler:
+ 235              	.LFB245:
+ 273:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 274:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 275:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /**
+ 276:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  * This function invokes the Request source handler for ADC_QUEUE_2
+ 277:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  */
+ 278:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** void ADC_QUEUE_2_ReqSrcEventHandler(void)
+ 279:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 236              	 .loc 1 279 0
+ 237              	 .cfi_startproc
+ 238              	 
+ 239              	 
+ 240 0000 80B5     	 push {r7,lr}
+ 241              	.LCFI4:
+ 242              	 .cfi_def_cfa_offset 8
+ 243              	 .cfi_offset 7,-8
+ 244              	 .cfi_offset 14,-4
+ 245 0002 00AF     	 add r7,sp,#0
+ 246              	.LCFI5:
+ 247              	 .cfi_def_cfa_register 7
+ 280:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   ADC_QUEUE_ReqSrcEventHandler(&ADC_QUEUE_2);
+ 248              	 .loc 1 280 0
+ 249 0004 0148     	 ldr r0,.L8
+ 250 0006 FFF7FEFF 	 bl ADC_QUEUE_ReqSrcEventHandler
+ 281:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** }
+ 251              	 .loc 1 281 0
+ 252 000a 80BD     	 pop {r7,pc}
+ 253              	.L9:
+ 254              	 .align 2
+ 255              	.L8:
+ 256 000c 00000000 	 .word ADC_QUEUE_2
+ 257              	 .cfi_endproc
+ 258              	.LFE245:
+ 260              	 .section .text.ADC_QUEUE_lInitializeListToDefaults,"ax",%progbits
+ 261              	 .align 2
+ 262              	 .global ADC_QUEUE_lInitializeListToDefaults
+ 263              	 .thumb
+ 264              	 .thumb_func
+ 266              	ADC_QUEUE_lInitializeListToDefaults:
+ 267              	.LFB246:
+ 282:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 283:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 284:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 285:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** /* API generated to initialise list pointers and clear its contents*/
+ 286:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** void ADC_QUEUE_lInitializeListToDefaults(uint8_t instance_num)
+ 287:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** {
+ 268              	 .loc 1 287 0
+ 269              	 .cfi_startproc
+ 270              	 
+ 271              	 
+ 272 0000 80B5     	 push {r7,lr}
+ 273              	.LCFI6:
+ 274              	 .cfi_def_cfa_offset 8
+ 275              	 .cfi_offset 7,-8
+ 276              	 .cfi_offset 14,-4
+ 277 0002 82B0     	 sub sp,sp,#8
+ 278              	.LCFI7:
+ 279              	 .cfi_def_cfa_offset 16
+ 280 0004 00AF     	 add r7,sp,#0
+ 281              	.LCFI8:
+ 282              	 .cfi_def_cfa_register 7
+ 283 0006 0346     	 mov r3,r0
+ 284 0008 FB71     	 strb r3,[r7,#7]
+ 288:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** 
+ 289:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   /* Initialise list pointers of APP Instance- ADC_QUEUE_0 */
+ 290:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[0][0] = adc_queue_list_ch_index_0;
+ 285              	 .loc 1 290 0
+ 286 000a 0C4B     	 ldr r3,.L11
+ 287 000c 0C4A     	 ldr r2,.L11+4
+ 288 000e 1A60     	 str r2,[r3]
+ 291:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[0][1] = adc_queue_list_pos_index_0;
+ 289              	 .loc 1 291 0
+ 290 0010 0A4B     	 ldr r3,.L11
+ 291 0012 0C4A     	 ldr r2,.L11+8
+ 292 0014 5A60     	 str r2,[r3,#4]
+ 292:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  
+ 293:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   /* Initialise list pointers of APP Instance- ADC_QUEUE_1 */
+ 294:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[1][0] = adc_queue_list_ch_index_1;
+ 293              	 .loc 1 294 0
+ 294 0016 094B     	 ldr r3,.L11
+ 295 0018 0B4A     	 ldr r2,.L11+12
+ 296 001a 9A60     	 str r2,[r3,#8]
+ 295:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[1][1] = adc_queue_list_pos_index_1;
+ 297              	 .loc 1 295 0
+ 298 001c 074B     	 ldr r3,.L11
+ 299 001e 0B4A     	 ldr r2,.L11+16
+ 300 0020 DA60     	 str r2,[r3,#12]
+ 296:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  
+ 297:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   /* Initialise list pointers of APP Instance- ADC_QUEUE_2 */
+ 298:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[2][0] = adc_queue_list_ch_index_2;
+ 301              	 .loc 1 298 0
+ 302 0022 064B     	 ldr r3,.L11
+ 303 0024 0A4A     	 ldr r2,.L11+20
+ 304 0026 1A61     	 str r2,[r3,#16]
+ 299:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   adc_queue_list_ptrs[2][1] = adc_queue_list_pos_index_2;
+ 305              	 .loc 1 299 0
+ 306 0028 044B     	 ldr r3,.L11
+ 307 002a 0A4A     	 ldr r2,.L11+24
+ 308 002c 5A61     	 str r2,[r3,#20]
+ 300:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****  
+ 301:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   /* Reset channels */
+ 302:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c ****   ADC_QUEUE_ResetListContents(instance_num);
+ 309              	 .loc 1 302 0
+ 310 002e FB79     	 ldrb r3,[r7,#7]
+ 311 0030 1846     	 mov r0,r3
+ 312 0032 FFF7FEFF 	 bl ADC_QUEUE_ResetListContents
+ 303:../Dave/Generated/ADC_QUEUE/adc_queue_conf.c **** }
+ 313              	 .loc 1 303 0
+ 314 0036 0837     	 adds r7,r7,#8
+ 315              	.LCFI9:
+ 316              	 .cfi_def_cfa_offset 8
+ 317 0038 BD46     	 mov sp,r7
+ 318              	.LCFI10:
+ 319              	 .cfi_def_cfa_register 13
+ 320              	 
+ 321 003a 80BD     	 pop {r7,pc}
+ 322              	.L12:
+ 323              	 .align 2
+ 324              	.L11:
+ 325 003c 00000000 	 .word adc_queue_list_ptrs
+ 326 0040 00000000 	 .word adc_queue_list_ch_index_0
+ 327 0044 00000000 	 .word adc_queue_list_pos_index_0
+ 328 0048 00000000 	 .word adc_queue_list_ch_index_1
+ 329 004c 00000000 	 .word adc_queue_list_pos_index_1
+ 330 0050 00000000 	 .word adc_queue_list_ch_index_2
+ 331 0054 00000000 	 .word adc_queue_list_pos_index_2
+ 332              	 .cfi_endproc
+ 333              	.LFE246:
+ 335              	 .text
+ 336              	.Letext0:
+ 337              	 .file 2 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\machine\\_default_types.h"
+ 338              	 .file 3 "c:\\davev4-64bit\\dave-4.3.2\\eclipse\\arm-gcc-49\\arm-none-eabi\\include\\stdint.h"
+ 339              	 .file 4 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Infineon/XMC4500_series/Include/XMC4500.h"
+ 340              	 .file 5 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/XMCLib/inc/xmc_vadc.h"
+ 341              	 .file 6 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Dave/Generated/GLOBAL_ADC/global_adc.h"
+ 342              	 .file 7 "../Dave/Generated/ADC_QUEUE/adc_queue.h"
+ 343              	 .file 8 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Include/core_cm4.h"
+ 344              	 .file 9 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Libraries/CMSIS/Infineon/XMC4500_series/Include/system_XMC4500.h"
+ 345              	 .file 10 "C:/Users/Mafish/Documents/XMCDev/Silniki2_0/Dave/Generated/GLOBAL_ADC/global_adc_extern.h"
+ 346              	 .file 11 "../Dave/Generated/ADC_QUEUE/ADC_QUEUE_Extern.h"
+DEFINED SYMBOLS
+                            *ABS*:00000000 adc_queue_conf.c
+    {standard input}:24     .rodata.ADC_QUEUE_0_reqsrc_config_0:00000000 ADC_QUEUE_0_reqsrc_config_0
+    {standard input}:21     .rodata.ADC_QUEUE_0_reqsrc_config_0:00000000 $d
+    {standard input}:35     .rodata.ADC_QUEUE_0_init_config_0:00000000 ADC_QUEUE_0_init_config_0
+    {standard input}:32     .rodata.ADC_QUEUE_0_init_config_0:00000000 $d
+    {standard input}:49     .data.ADC_QUEUE_0:00000000 ADC_QUEUE_0
+    {standard input}:46     .data.ADC_QUEUE_0:00000000 $d
+                            *COM*:00000060 adc_queue_list_ch_index_0
+                            *COM*:00000060 adc_queue_list_pos_index_0
+    {standard input}:72     .rodata.ADC_QUEUE_1_reqsrc_config_1:00000000 ADC_QUEUE_1_reqsrc_config_1
+    {standard input}:69     .rodata.ADC_QUEUE_1_reqsrc_config_1:00000000 $d
+    {standard input}:83     .rodata.ADC_QUEUE_1_init_config_1:00000000 ADC_QUEUE_1_init_config_1
+    {standard input}:80     .rodata.ADC_QUEUE_1_init_config_1:00000000 $d
+    {standard input}:97     .data.ADC_QUEUE_1:00000000 ADC_QUEUE_1
+    {standard input}:94     .data.ADC_QUEUE_1:00000000 $d
+                            *COM*:00000060 adc_queue_list_ch_index_1
+                            *COM*:00000060 adc_queue_list_pos_index_1
+    {standard input}:120    .rodata.ADC_QUEUE_2_reqsrc_config_2:00000000 ADC_QUEUE_2_reqsrc_config_2
+    {standard input}:117    .rodata.ADC_QUEUE_2_reqsrc_config_2:00000000 $d
+    {standard input}:131    .rodata.ADC_QUEUE_2_init_config_2:00000000 ADC_QUEUE_2_init_config_2
+    {standard input}:128    .rodata.ADC_QUEUE_2_init_config_2:00000000 $d
+    {standard input}:145    .data.ADC_QUEUE_2:00000000 ADC_QUEUE_2
+    {standard input}:142    .data.ADC_QUEUE_2:00000000 $d
+                            *COM*:00000060 adc_queue_list_ch_index_2
+                            *COM*:00000060 adc_queue_list_pos_index_2
+    {standard input}:164    .text.VADC0_G0_1_IRQHandler:00000000 $t
+    {standard input}:169    .text.VADC0_G0_1_IRQHandler:00000000 VADC0_G0_1_IRQHandler
+    {standard input}:192    .text.VADC0_G0_1_IRQHandler:0000000c $d
+    {standard input}:197    .text.VADC0_G1_3_IRQHandler:00000000 $t
+    {standard input}:202    .text.VADC0_G1_3_IRQHandler:00000000 VADC0_G1_3_IRQHandler
+    {standard input}:224    .text.VADC0_G1_3_IRQHandler:0000000c $d
+    {standard input}:229    .text.VADC0_G2_0_IRQHandler:00000000 $t
+    {standard input}:234    .text.VADC0_G2_0_IRQHandler:00000000 VADC0_G2_0_IRQHandler
+    {standard input}:256    .text.VADC0_G2_0_IRQHandler:0000000c $d
+    {standard input}:261    .text.ADC_QUEUE_lInitializeListToDefaults:00000000 $t
+    {standard input}:266    .text.ADC_QUEUE_lInitializeListToDefaults:00000000 ADC_QUEUE_lInitializeListToDefaults
+    {standard input}:325    .text.ADC_QUEUE_lInitializeListToDefaults:0000003c $d
+                     .debug_frame:00000010 $d
+
+UNDEFINED SYMBOLS
+GLOBAL_ADC_0
+ADC_QUEUE_ReqSrcEventHandler
+ADC_QUEUE_ResetListContents
+adc_queue_list_ptrs
