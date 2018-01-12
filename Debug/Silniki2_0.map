@@ -64,8 +64,6 @@ adc_queue_list_ptrs
                     0x20              ./Dave/Generated/ADC_QUEUE/adc_queue.o
 adc_queue_list_pos_index_0
                     0x60              ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-zmienna_testowa_do_githuba
-                    0x4               ./main.o
 PI_Id               0x1c              ./main.o
 rData               0x6               ./main.o
 adc_queue_list_ch_index_2
@@ -2271,7 +2269,7 @@ END GROUP
                 0x00000800                stack_size = DEFINED (stack_size)?stack_size:0x800
                 0x00000040                no_init_size = 0x40
 
-.text           0x08000000     0x8b18 load address 0x0c000000
+.text           0x08000000     0x8b10 load address 0x0c000000
                 0x08000000                sText = .
  *(.reset)
  .reset         0x08000000      0x2b4 ./Startup/startup_XMC4500.o
@@ -3114,96 +3112,96 @@ END GROUP
                 0x08006380                RS_Init
  .text.main     0x080063b0      0x130 ./main.o
                 0x080063b0                main
- .text.SYS2     0x080064e0      0x1b0 ./main.o
+ .text.SYS2     0x080064e0      0x148 ./main.o
                 0x080064e0                SYS2
- .text.enkoder  0x08006690       0x5c ./main.o
-                0x08006690                enkoder
- .text.SYS1     0x080066ec      0x298 ./main.o
-                0x080066ec                SYS1
+ .text.enkoder  0x08006628       0x5c ./main.o
+                0x08006628                enkoder
+ .text.SYS1     0x08006684      0x2fc ./main.o
+                0x08006684                SYS1
  .text.DRV_START
-                0x08006984      0x15c ./main.o
-                0x08006984                DRV_START
+                0x08006980      0x15c ./main.o
+                0x08006980                DRV_START
  .text.LiczeniePradu
-                0x08006ae0      0x110 ./main.o
-                0x08006ae0                LiczeniePradu
+                0x08006adc      0x110 ./main.o
+                0x08006adc                LiczeniePradu
  .text.CCU80_2_IRQHandler
-                0x08006bf0        0xc ./main.o
-                0x08006bf0                CCU80_2_IRQHandler
+                0x08006bec        0xc ./main.o
+                0x08006bec                CCU80_2_IRQHandler
  .text.XMC_Init
-                0x08006bfc       0xb8 ./main.o
-                0x08006bfc                XMC_Init
+                0x08006bf8       0xb8 ./main.o
+                0x08006bf8                XMC_Init
  .text.end_transmit
-                0x08006cb4        0xc ./main.o
-                0x08006cb4                end_transmit
+                0x08006cb0        0xc ./main.o
+                0x08006cb0                end_transmit
  .text.end_receive
-                0x08006cc0       0x80 ./main.o
-                0x08006cc0                end_receive
+                0x08006cbc       0x80 ./main.o
+                0x08006cbc                end_receive
  .text.interpreter_wiadomosci
-                0x08006d40       0xc0 ./main.o
-                0x08006d40                interpreter_wiadomosci
- .text.delay    0x08006e00       0x3c ./main.o
-                0x08006e00                delay
+                0x08006d3c       0xc0 ./main.o
+                0x08006d3c                interpreter_wiadomosci
+ .text.delay    0x08006dfc       0x3c ./main.o
+                0x08006dfc                delay
  .text.CCU43_1_IRQHandler
-                0x08006e3c       0x18 ./main.o
-                0x08006e3c                CCU43_1_IRQHandler
- .text.sqrtf    0x08006e54       0xb0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-wf_sqrt.o)
-                0x08006e54                sqrtf
+                0x08006e38       0x18 ./main.o
+                0x08006e38                CCU43_1_IRQHandler
+ .text.sqrtf    0x08006e50       0xb0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-wf_sqrt.o)
+                0x08006e50                sqrtf
  .text.__ieee754_sqrtf
-                0x08006f04       0xac c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-ef_sqrt.o)
-                0x08006f04                __ieee754_sqrtf
- .text.matherr  0x08006fb0        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_matherr.o)
-                0x08006fb0                matherr
+                0x08006f00       0xac c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-ef_sqrt.o)
+                0x08006f00                __ieee754_sqrtf
+ .text.matherr  0x08006fac        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-s_matherr.o)
+                0x08006fac                matherr
  .text.__fpclassifyf
-                0x08006fb4       0x34 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-sf_fpclassify.o)
-                0x08006fb4                __fpclassifyf
- .text          0x08006fe8      0x370 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
-                0x08006fe8                __aeabi_drsub
-                0x08006ff0                __aeabi_dsub
-                0x08006ff0                __subdf3
-                0x08006ff4                __aeabi_dadd
-                0x08006ff4                __adddf3
-                0x0800726c                __floatunsidf
-                0x0800726c                __aeabi_ui2d
-                0x0800728c                __floatsidf
-                0x0800728c                __aeabi_i2d
-                0x080072b0                __aeabi_f2d
-                0x080072b0                __extendsfdf2
-                0x080072ec                __floatundidf
-                0x080072ec                __aeabi_ul2d
-                0x080072fc                __floatdidf
-                0x080072fc                __aeabi_l2d
- .text          0x08007358      0x424 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
-                0x08007358                __aeabi_dmul
-                0x08007358                __muldf3
-                0x080075ac                __divdf3
-                0x080075ac                __aeabi_ddiv
- .text          0x0800777c       0xa0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
-                0x0800777c                __truncdfsf2
-                0x0800777c                __aeabi_d2f
- .text          0x0800781c       0x2c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_aeabi_uldivmod.o)
-                0x0800781c                __aeabi_uldivmod
- .text          0x08007848       0x60 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(bpabi.o)
-                0x08007848                __gnu_ldivmod_helper
-                0x08007878                __gnu_uldivmod_helper
- .text          0x080078a8        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_dvmd_tls.o)
-                0x080078a8                __aeabi_idiv0
-                0x080078a8                __aeabi_ldiv0
- .text          0x080078ac      0x29c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_divdi3.o)
-                0x080078ac                __divdi3
- .text          0x08007b48      0x26c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_udivdi3.o)
-                0x08007b48                __udivdi3
- .text.__errno  0x08007db4        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
-                0x08007db4                __errno
+                0x08006fb0       0x34 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-sf_fpclassify.o)
+                0x08006fb0                __fpclassifyf
+ .text          0x08006fe4      0x370 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_addsubdf3.o)
+                0x08006fe4                __aeabi_drsub
+                0x08006fec                __aeabi_dsub
+                0x08006fec                __subdf3
+                0x08006ff0                __aeabi_dadd
+                0x08006ff0                __adddf3
+                0x08007268                __floatunsidf
+                0x08007268                __aeabi_ui2d
+                0x08007288                __floatsidf
+                0x08007288                __aeabi_i2d
+                0x080072ac                __aeabi_f2d
+                0x080072ac                __extendsfdf2
+                0x080072e8                __floatundidf
+                0x080072e8                __aeabi_ul2d
+                0x080072f8                __floatdidf
+                0x080072f8                __aeabi_l2d
+ .text          0x08007354      0x424 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_muldivdf3.o)
+                0x08007354                __aeabi_dmul
+                0x08007354                __muldf3
+                0x080075a8                __divdf3
+                0x080075a8                __aeabi_ddiv
+ .text          0x08007778       0xa0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_arm_truncdfsf2.o)
+                0x08007778                __truncdfsf2
+                0x08007778                __aeabi_d2f
+ .text          0x08007818       0x2c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_aeabi_uldivmod.o)
+                0x08007818                __aeabi_uldivmod
+ .text          0x08007844       0x60 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(bpabi.o)
+                0x08007844                __gnu_ldivmod_helper
+                0x08007874                __gnu_uldivmod_helper
+ .text          0x080078a4        0x4 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_dvmd_tls.o)
+                0x080078a4                __aeabi_idiv0
+                0x080078a4                __aeabi_ldiv0
+ .text          0x080078a8      0x29c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_divdi3.o)
+                0x080078a8                __divdi3
+ .text          0x08007b44      0x26c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_udivdi3.o)
+                0x08007b44                __udivdi3
+ .text.__errno  0x08007db0        0xc c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-errno.o)
+                0x08007db0                __errno
  .text.__libc_init_array
-                0x08007dc0       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
-                0x08007dc0                __libc_init_array
- .text.memcpy   0x08007e0c       0x16 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
-                0x08007e0c                memcpy
- .text.memset   0x08007e22       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
-                0x08007e22                memset
- *fill*         0x08007e32        0x6 
+                0x08007dbc       0x4c c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-init.o)
+                0x08007dbc                __libc_init_array
+ .text.memcpy   0x08007e08       0x16 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
+                0x08007e08                memcpy
+ .text.memset   0x08007e1e       0x10 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
+                0x08007e1e                memset
+ *fill*         0x08007e2e        0x2 
  .text.memset.__stub
-                0x08007e38       0x10 linker stubs
+                0x08007e30       0x10 linker stubs
  *(.init)
  *(.fini)
  *crtbegin.o(.ctors)
@@ -3217,232 +3215,232 @@ END GROUP
  *(SORT(.dtors.*))
  *(.dtors)
  *(.rodata .rodata.*)
- *fill*         0x08007e48        0x0 
+ *fill*         0x08007e40        0x0 
  .rodata.g_xmc_vadc_group_array
-                0x08007e48       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
+                0x08007e40       0x10 ./Libraries/XMCLib/src/xmc_vadc.o
  .rodata.UART_0_channel_config
-                0x08007e58        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08007e58                UART_0_channel_config
+                0x08007e50        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08007e50                UART_0_channel_config
  .rodata.UART_0_tx_pin_config
-                0x08007e64        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08007e64                UART_0_tx_pin_config
+                0x08007e5c        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08007e5c                UART_0_tx_pin_config
  .rodata.UART_0_tx_pin
-                0x08007e70        0xc ./Dave/Generated/UART/uart_conf.o
-                0x08007e70                UART_0_tx_pin
+                0x08007e68        0xc ./Dave/Generated/UART/uart_conf.o
+                0x08007e68                UART_0_tx_pin
  .rodata.UART_0_config
-                0x08007e7c       0x30 ./Dave/Generated/UART/uart_conf.o
-                0x08007e7c                UART_0_config
+                0x08007e74       0x30 ./Dave/Generated/UART/uart_conf.o
+                0x08007e74                UART_0_config
  .rodata.SPI_enkoder_MOSI
-                0x08007eac        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007eac                SPI_enkoder_MOSI
+                0x08007ea4        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007ea4                SPI_enkoder_MOSI
  .rodata.SPI_enkoder_MISO
-                0x08007eb4        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007eb4                SPI_enkoder_MISO
+                0x08007eac        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007eac                SPI_enkoder_MISO
  .rodata.SPI_enkoder_SCLKOUT
-                0x08007ebc        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007ebc                SPI_enkoder_SCLKOUT
+                0x08007eb4        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007eb4                SPI_enkoder_SCLKOUT
  .rodata.SPI_enkoder_SCLKOUT_Config
-                0x08007ec4       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007ec4                SPI_enkoder_SCLKOUT_Config
+                0x08007ebc       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007ebc                SPI_enkoder_SCLKOUT_Config
  .rodata.SPI_enkoder_SS_0
-                0x08007ed8        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007ed8                SPI_enkoder_SS_0
+                0x08007ed0        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007ed0                SPI_enkoder_SS_0
  .rodata.SPI_enkoder_SS_0_Config
-                0x08007ee0       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007ee0                SPI_enkoder_SS_0_Config
+                0x08007ed8       0x14 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007ed8                SPI_enkoder_SS_0_Config
  .rodata.SPI_enkoder_SS_1
-                0x08007ef4        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007ef4                SPI_enkoder_SS_1
+                0x08007eec        0x8 ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007eec                SPI_enkoder_SS_1
  .rodata.SPI_enkoder_Config
-                0x08007efc       0x8c ./Dave/Generated/SPI_MASTER/spi_master_conf.o
-                0x08007efc                SPI_enkoder_Config
+                0x08007ef4       0x8c ./Dave/Generated/SPI_MASTER/spi_master_conf.o
+                0x08007ef4                SPI_enkoder_Config
  .rodata.SVPWM_PhUHighPin
-                0x08007f88        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007f88                SVPWM_PhUHighPin
+                0x08007f80        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007f80                SVPWM_PhUHighPin
  .rodata.SVPWM_PhULowPin
-                0x08007f90        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007f90                SVPWM_PhULowPin
+                0x08007f88        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007f88                SVPWM_PhULowPin
  .rodata.SVPWM_PhVHighPin
-                0x08007f98        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007f98                SVPWM_PhVHighPin
+                0x08007f90        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007f90                SVPWM_PhVHighPin
  .rodata.SVPWM_PhVLowPin
-                0x08007fa0        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fa0                SVPWM_PhVLowPin
+                0x08007f98        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007f98                SVPWM_PhVLowPin
  .rodata.SVPWM_PhWHighPin
-                0x08007fa8        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fa8                SVPWM_PhWHighPin
+                0x08007fa0        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fa0                SVPWM_PhWHighPin
  .rodata.SVPWM_PhWLowPin
-                0x08007fb0        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fb0                SVPWM_PhWLowPin
+                0x08007fa8        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fa8                SVPWM_PhWLowPin
  .rodata.SVPWM_PhUHiOutPinConf
-                0x08007fb8        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fb8                SVPWM_PhUHiOutPinConf
+                0x08007fb0        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fb0                SVPWM_PhUHiOutPinConf
  .rodata.SVPWM_PhULoOutPinConf
-                0x08007fc4        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fc4                SVPWM_PhULoOutPinConf
+                0x08007fbc        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fbc                SVPWM_PhULoOutPinConf
  .rodata.SVPWM_PhVHiOutPinConf
-                0x08007fd0        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fd0                SVPWM_PhVHiOutPinConf
+                0x08007fc8        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fc8                SVPWM_PhVHiOutPinConf
  .rodata.SVPWM_PhVLoOutPinConf
-                0x08007fdc        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fdc                SVPWM_PhVLoOutPinConf
+                0x08007fd4        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fd4                SVPWM_PhVLoOutPinConf
  .rodata.SVPWM_PhWHiOutPinConf
-                0x08007fe8        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007fe8                SVPWM_PhWHiOutPinConf
+                0x08007fe0        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fe0                SVPWM_PhWHiOutPinConf
  .rodata.SVPWM_PhWLoOutPinConf
-                0x08007ff4        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08007ff4                SVPWM_PhWLoOutPinConf
+                0x08007fec        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007fec                SVPWM_PhWLoOutPinConf
  .rodata.SVPWM_InverterPin
-                0x08008000        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008000                SVPWM_InverterPin
+                0x08007ff8        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08007ff8                SVPWM_InverterPin
  .rodata.SVPWM_InvPinConf
-                0x08008008        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008008                SVPWM_InvPinConf
+                0x08008000        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008000                SVPWM_InvPinConf
  .rodata.SVPWM_TrapPin
-                0x08008014        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008014                SVPWM_TrapPin
+                0x0800800c        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x0800800c                SVPWM_TrapPin
  .rodata.SVPWM_TrapPinConf
-                0x0800801c        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x0800801c                SVPWM_TrapPinConf
+                0x08008014        0xc ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008014                SVPWM_TrapPinConf
  .rodata.SVPWM_TrapConfig
-                0x08008028        0x4 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008028                SVPWM_TrapConfig
+                0x08008020        0x4 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008020                SVPWM_TrapConfig
  .rodata.SVPWM_PhU
-                0x0800802c        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x0800802c                SVPWM_PhU
+                0x08008024        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008024                SVPWM_PhU
  .rodata.SVPWM_PhV
-                0x08008034        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008034                SVPWM_PhV
+                0x0800802c        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x0800802c                SVPWM_PhV
  .rodata.SVPWM_PhW
-                0x0800803c        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x0800803c                SVPWM_PhW
+                0x08008034        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008034                SVPWM_PhW
  .rodata.SVPWM_CurrentTrig
-                0x08008044        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008044                SVPWM_CurrentTrig
+                0x0800803c        0x8 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x0800803c                SVPWM_CurrentTrig
  .rodata.SVPWM_StartConfig
-                0x0800804c        0x4 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x0800804c                SVPWM_StartConfig
+                0x08008044        0x4 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008044                SVPWM_StartConfig
  .rodata.SVPWM_TimerInitHandle
-                0x08008050       0x10 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008050                SVPWM_TimerInitHandle
+                0x08008048       0x10 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008048                SVPWM_TimerInitHandle
  .rodata.SVPWM_TimerInit_CurrentTrig
-                0x08008060       0x10 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008060                SVPWM_TimerInit_CurrentTrig
+                0x08008058       0x10 ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008058                SVPWM_TimerInit_CurrentTrig
  .rodata.SVPWM_AppConfig
-                0x08008070       0x4c ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
-                0x08008070                SVPWM_AppConfig
+                0x08008068       0x4c ./Dave/Generated/PWM_SVM/pwm_svm_conf.o
+                0x08008068                SVPWM_AppConfig
  .rodata.Sinus60_tab
-                0x080080bc      0x804 ./Dave/Generated/PWM_SVM/pwm_svm_table.o
-                0x080080bc                Sinus60_tab
+                0x080080b4      0x804 ./Dave/Generated/PWM_SVM/pwm_svm_table.o
+                0x080080b4                Sinus60_tab
  .rodata.MOTOR_LIB_E
-                0x080088c0       0x5c ./Dave/Generated/MOTOR_LIB/motor_lib.o
-                0x080088c0                MOTOR_LIB_E
+                0x080088b8       0x5c ./Dave/Generated/MOTOR_LIB/motor_lib.o
+                0x080088b8                MOTOR_LIB_E
  .rodata.INTERRUPT_0
-                0x0800891c        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
-                0x0800891c                INTERRUPT_0
+                0x08008914        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
+                0x08008914                INTERRUPT_0
  .rodata.TIM_IRQ
-                0x08008920        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
-                0x08008920                TIM_IRQ
+                0x08008918        0x4 ./Dave/Generated/INTERRUPT/interrupt_conf.o
+                0x08008918                TIM_IRQ
  .rodata.group_init_handle0
-                0x08008924       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x08008924                group_init_handle0
+                0x0800891c       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x0800891c                group_init_handle0
  .rodata.group_init_handle1
-                0x08008938       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x08008938                group_init_handle1
+                0x08008930       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08008930                group_init_handle1
  .rodata.group_init_handle2
-                0x0800894c       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x0800894c                group_init_handle2
+                0x08008944       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08008944                group_init_handle2
  .rodata.group_init_handle3
-                0x08008960       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x08008960                group_init_handle3
+                0x08008958       0x14 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x08008958                group_init_handle3
  .rodata.global_config
-                0x08008974       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
-                0x08008974                global_config
- .rodata.LED    0x0800898c       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
-                0x0800898c                LED
+                0x0800896c       0x18 ./Dave/Generated/GLOBAL_ADC/global_adc_conf.o
+                0x0800896c                global_config
+ .rodata.LED    0x08008984       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08008984                LED
  .rodata.DC_CAL
-                0x080089a0       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
-                0x080089a0                DC_CAL
+                0x08008998       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x08008998                DC_CAL
  .rodata.SIGNAL
-                0x080089b4       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
-                0x080089b4                SIGNAL
- .rodata        0x080089c8       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
+                0x080089ac       0x14 ./Dave/Generated/DIGITAL_IO/digital_io_conf.o
+                0x080089ac                SIGNAL
+ .rodata        0x080089c0       0x14 ./Dave/Generated/CLOCK_XMC4/clock_xmc4_conf.o
  .rodata.ADC_QUEUE_0_reqsrc_config_0
-                0x080089dc       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x080089dc                ADC_QUEUE_0_reqsrc_config_0
+                0x080089d4       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x080089d4                ADC_QUEUE_0_reqsrc_config_0
  .rodata.ADC_QUEUE_0_init_config_0
-                0x080089ec        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x080089ec                ADC_QUEUE_0_init_config_0
+                0x080089e4        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x080089e4                ADC_QUEUE_0_init_config_0
  .rodata.ADC_QUEUE_1_reqsrc_config_1
-                0x080089f8       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x080089f8                ADC_QUEUE_1_reqsrc_config_1
+                0x080089f0       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x080089f0                ADC_QUEUE_1_reqsrc_config_1
  .rodata.ADC_QUEUE_1_init_config_1
-                0x08008a08        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x08008a08                ADC_QUEUE_1_init_config_1
+                0x08008a00        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x08008a00                ADC_QUEUE_1_init_config_1
  .rodata.ADC_QUEUE_2_reqsrc_config_2
-                0x08008a14       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x08008a14                ADC_QUEUE_2_reqsrc_config_2
+                0x08008a0c       0x10 ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x08008a0c                ADC_QUEUE_2_reqsrc_config_2
  .rodata.ADC_QUEUE_2_init_config_2
-                0x08008a24        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
-                0x08008a24                ADC_QUEUE_2_init_config_2
+                0x08008a1c        0xc ./Dave/Generated/ADC_QUEUE/adc_queue_conf.o
+                0x08008a1c                ADC_QUEUE_2_init_config_2
  .rodata.group_ptrs
-                0x08008a30       0x10 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv.o
-                0x08008a30                group_ptrs
+                0x08008a28       0x10 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv.o
+                0x08008a28                group_ptrs
  .rodata.ADC_U_Channel_A_ch_config
-                0x08008a40        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a38        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_U_Channel_A_res_config
-                0x08008a4c        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a44        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_U_Channel_A_handle
-                0x08008a50        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008a50                ADC_U_Channel_A_handle
+                0x08008a48        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a48                ADC_U_Channel_A_handle
  .rodata.ADC_U_Channel_A_queue_entry_0
-                0x08008a5c        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
- .rodata.ADC_U  0x08008a68       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008a68                ADC_U
+                0x08008a54        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+ .rodata.ADC_U  0x08008a60       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a60                ADC_U
  .rodata.ADC_V_Channel_A_ch_config
-                0x08008a84        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a7c        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_V_Channel_A_res_config
-                0x08008a90        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a88        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_V_Channel_A_handle
-                0x08008a94        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008a94                ADC_V_Channel_A_handle
+                0x08008a8c        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008a8c                ADC_V_Channel_A_handle
  .rodata.ADC_V_Channel_A_queue_entry_0
-                0x08008aa0        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
- .rodata.ADC_V  0x08008aac       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008aac                ADC_V
+                0x08008a98        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+ .rodata.ADC_V  0x08008aa4       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008aa4                ADC_V
  .rodata.ADC_W_Channel_A_ch_config
-                0x08008ac8        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008ac0        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_W_Channel_A_res_config
-                0x08008ad4        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008acc        0x4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .rodata.ADC_W_Channel_A_handle
-                0x08008ad8        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008ad8                ADC_W_Channel_A_handle
+                0x08008ad0        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008ad0                ADC_W_Channel_A_handle
  .rodata.ADC_W_Channel_A_queue_entry_0
-                0x08008ae4        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
- .rodata.ADC_W  0x08008af0       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
-                0x08008af0                ADC_W
+                0x08008adc        0xc ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+ .rodata.ADC_W  0x08008ae8       0x1c ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
+                0x08008ae8                ADC_W
  .rodata.str1.4
-                0x08008b0c        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-wf_sqrt.o)
+                0x08008b04        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libm.a(lib_a-wf_sqrt.o)
  .rodata.str1.1
-                0x08008b14        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
+                0x08008b0c        0x2 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-impure.o)
  *(.gnu.linkonce.r*)
  *(vtable)
-                0x08008b18                . = ALIGN (0x4)
- *fill*         0x08008b16        0x2 
+                0x08008b10                . = ALIGN (0x4)
+ *fill*         0x08008b0e        0x2 
 
-.glue_7         0x08008b18        0x0 load address 0x0c008b18
+.glue_7         0x08008b10        0x0 load address 0x0c008b10
  .glue_7        0x00000000        0x0 linker stubs
 
-.glue_7t        0x08008b18        0x0 load address 0x0c008b18
+.glue_7t        0x08008b10        0x0 load address 0x0c008b10
  .glue_7t       0x00000000        0x0 linker stubs
 
-.vfp11_veneer   0x08008b18        0x0 load address 0x0c008b18
+.vfp11_veneer   0x08008b10        0x0 load address 0x0c008b10
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x08008b18        0x0 load address 0x0c008b18
+.v4_bx          0x08008b10        0x0 load address 0x0c008b10
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x08008b18        0x0 load address 0x0c008b18
+.iplt           0x08008b10        0x0 load address 0x0c008b10
  .iplt          0x00000000        0x0 ./Startup/startup_XMC4500.o
 
 .eh_frame_hdr
@@ -3453,16 +3451,16 @@ END GROUP
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08008b18                . = ALIGN (0x4)
-                0x08008b18                __exidx_start = .
+                0x08008b10                . = ALIGN (0x4)
+                0x08008b10                __exidx_start = .
 
-.ARM.exidx      0x08008b18        0x8 load address 0x0c008b18
+.ARM.exidx      0x08008b10        0x8 load address 0x0c008b10
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x08008b18        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_divdi3.o)
- .ARM.exidx     0x08008b20        0x0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x08008b10        0x8 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x08008b18        0x0 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/armv7e-m/softfp\libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x08008b20                __exidx_end = .
-                0x08008b20                . = ALIGN (0x4)
+                0x08008b18                __exidx_end = .
+                0x08008b18                . = ALIGN (0x4)
 
 Stack           0x10000000      0x800
                 0x10000000                __stack_start = .
@@ -3471,7 +3469,7 @@ Stack           0x10000000      0x800
                 0x10000800                __stack_end = .
                 0x10000800                __initial_sp = .
 
-.ram_code       0x10000800      0x448 load address 0x0c008b20
+.ram_code       0x10000800      0x448 load address 0x0c008b18
                 0x10000800                . = ALIGN (0x4)
                 0x10000800                __ram_code_start = .
  *(.ram_code)
@@ -3482,22 +3480,22 @@ Stack           0x10000000      0x800
                 0x10000c00                PWM_SVM_SVMUpdate
                 0x10000c48                . = ALIGN (0x4)
                 0x10000c48                __ram_code_end = .
-                0x0c008b20                __ram_code_load = LOADADDR (.ram_code)
+                0x0c008b18                __ram_code_load = LOADADDR (.ram_code)
                 0x00000448                __ram_code_size = (__ram_code_end - __ram_code_start)
 
-.rel.dyn        0x10000c48        0x0 load address 0x0c008f68
+.rel.dyn        0x10000c48        0x0 load address 0x0c008f60
  .rel.iplt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-PSRAM_DATA      0x10000c48        0x0 load address 0x0c008f68
+PSRAM_DATA      0x10000c48        0x0 load address 0x0c008f60
                 0x10000c48                . = ALIGN (0x4)
                 0x10000c48                __data3_start = .
  *(PSRAM_DATA)
                 0x10000c48                . = ALIGN (0x4)
                 0x10000c48                __data3_end = .
-                0x0c008f68                __data3_load = LOADADDR (PSRAM_DATA)
+                0x0c008f60                __data3_load = LOADADDR (PSRAM_DATA)
                 0x00000000                __data3_size = (__data3_end - __data3_start)
 
-PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f68
+PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f60
                 0x10000c48                . = ALIGN (0x4)
                 0x10000c48                __bss3_start = .
  *(PSRAM_BSS)
@@ -3507,7 +3505,7 @@ PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f68
                 0x10000c48                Heap_Bank3_Start = .
                 0x00000000                __bss3_size = (__bss3_end - __bss3_start)
 
-.data           0x20000000      0x334 load address 0x0c008f68
+.data           0x20000000      0x334 load address 0x0c008f60
                 0x20000000                . = ALIGN (0x4)
                 0x20000000                __data_start = .
  *(.data)
@@ -3634,13 +3632,13 @@ PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f68
                 0x20000334                PROVIDE (__fini_array_end, .)
                 0x20000334                . = ALIGN (0x4)
                 0x20000334                __data_end = .
-                0x0c008f68                __data_load = LOADADDR (.data)
+                0x0c008f60                __data_load = LOADADDR (.data)
                 0x00000334                __data_size = (__data_end - __data_start)
 
-.igot.plt       0x20000334        0x0 load address 0x0c00929c
+.igot.plt       0x20000334        0x0 load address 0x0c009294
  .igot.plt      0x00000000        0x0 ./Startup/startup_XMC4500.o
 
-.bss            0x20000334      0x484 load address 0x0c00929c
+.bss            0x20000334      0x484 load address 0x0c009294
                 0x20000334                . = ALIGN (0x4)
                 0x20000334                __bss_start = .
  *(.bss)
@@ -3755,29 +3753,29 @@ PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f68
                 0x2000060c                adc_queue_list_pos_index_0
                 0x2000066c                adc_queue_list_ch_index_2
                 0x200006cc                adc_queue_list_pos_index_2
- COMMON         0x2000072c       0x8c ./main.o
+ COMMON         0x2000072c       0x88 ./main.o
                 0x2000072c                Iq_zadane
                 0x20000730                Iq_poprzednie
                 0x20000734                tDataZero
                 0x20000738                PI_Iq
                 0x20000754                Id_poprzednie
                 0x20000758                Vd_zadane
-                0x2000075c                zmienna_testowa_do_githuba
-                0x20000760                PI_Id
-                0x2000077c                rData
-                0x20000784                PI_predkosc
-                0x200007a0                Id_zadane
-                0x200007a4                predkosc_enkoder
-                0x200007a8                tData
-                0x200007ac                uchyb_Id
-                0x200007b0                uchyb
-                0x200007b4                Vq_zadane
+                0x2000075c                PI_Id
+                0x20000778                rData
+                0x20000780                PI_predkosc
+                0x2000079c                Id_zadane
+                0x200007a0                predkosc_enkoder
+                0x200007a4                tData
+                0x200007a8                uchyb_Id
+                0x200007ac                uchyb
+                0x200007b0                Vq_zadane
  *(.gnu.linkonce.b*)
-                0x200007b8                . = ALIGN (0x4)
-                0x200007b8                __bss_end = .
+                0x200007b4                . = ALIGN (0x4)
+                0x200007b4                __bss_end = .
                 0x200007b8                . = ALIGN (0x8)
+ *fill*         0x200007b4        0x4 
                 0x200007b8                Heap_Bank1_Start = .
-                0x00000484                __bss_size = (__bss_end - __bss_start)
+                0x00000480                __bss_size = (__bss_end - __bss_start)
 
 .no_init        0x2000ffc0       0x14
                 0x2000ffc0                Heap_Bank1_End = .
@@ -3786,18 +3784,18 @@ PSRAM_BSS       0x10000c48        0x0 load address 0x0c008f68
                 0x2000ffc0                SystemCoreClock
                 0x2000ffc4                g_chipid
 
-DSRAM2_DATA     0x30000000        0x0 load address 0x0c00929c
+DSRAM2_DATA     0x30000000        0x0 load address 0x0c009294
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_start = .
  *(DSRAM2_DATA)
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __data2_end = .
-                0x0c00929c                __data2_load = LOADADDR (DSRAM2_DATA)
+                0x0c009294                __data2_load = LOADADDR (DSRAM2_DATA)
                 0x00000000                __data2_size = (__data2_end - __data2_start)
-                0x0000929c                __text_size = (((((__exidx_end - sText) + __data_size) + __ram_code_size) + __data2_size) + __data3_size)
-                0x0800929c                eText = (sText + __text_size)
+                0x00009294                __text_size = (((((__exidx_end - sText) + __data_size) + __ram_code_size) + __data2_size) + __data3_size)
+                0x08009294                eText = (sText + __text_size)
 
-DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
+DSRAM2_BSS      0x30000000        0x0 load address 0x0c009294
                 0x30000000                . = ALIGN (0x4)
                 0x30000000                __bss2_start = .
  *(ETH_RAM)
@@ -3935,7 +3933,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_info     0x00000000    0x2d531
+.debug_info     0x00000000    0x2d51f
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000       0x77 ./Startup/startup_XMC4500.o
  .debug_info    0x00000077      0x8b7 ./Startup/system_XMC4500.o
@@ -3982,7 +3980,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
  .debug_info    0x00021642     0x2060 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv.o
  .debug_info    0x000236a2     0x19d4 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .debug_info    0x00025076     0x4491 ./Dave/Generated/DAVE.o
- .debug_info    0x00029507     0x402a ./main.o
+ .debug_info    0x00029507     0x4018 ./main.o
 
 .debug_abbrev   0x00000000     0x4fce
  *(.debug_abbrev)
@@ -4033,7 +4031,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
  .debug_abbrev  0x000049fc      0x20c ./Dave/Generated/DAVE.o
  .debug_abbrev  0x00004c08      0x3c6 ./main.o
 
-.debug_line     0x00000000     0xb5ed
+.debug_line     0x00000000     0xb5ef
  *(.debug_line)
  .debug_line    0x00000000       0x88 ./Startup/startup_XMC4500.o
  .debug_line    0x00000088      0x2c9 ./Startup/system_XMC4500.o
@@ -4080,7 +4078,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
  .debug_line    0x00009c50      0x628 ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv.o
  .debug_line    0x0000a278      0x33e ./Dave/Generated/ADC_MEASUREMENT_ADV/adc_measurement_adv_conf.o
  .debug_line    0x0000a5b6      0x5f0 ./Dave/Generated/DAVE.o
- .debug_line    0x0000aba6      0xa47 ./main.o
+ .debug_line    0x0000aba6      0xa49 ./main.o
 
 .debug_frame    0x00000000     0x6cd4
  *(.debug_frame)
@@ -4132,7 +4130,7 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
  .debug_frame   0x00006c8c       0x28 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memcpy.o)
  .debug_frame   0x00006cb4       0x20 c:/davev4-64bit/dave-4.3.2/eclipse/arm-gcc-49/bin/../lib/gcc/arm-none-eabi/4.9.3/../../../../arm-none-eabi/lib/armv7e-m/softfp\libg_nano.a(lib_a-memset.o)
 
-.debug_str      0x00000000    0x1077c
+.debug_str      0x00000000    0x10761
  *(.debug_str)
  .debug_str     0x00000000      0x4de ./Startup/system_XMC4500.o
                                 0x569 (size before relaxing)
@@ -4222,8 +4220,8 @@ DSRAM2_BSS      0x30000000        0x0 load address 0x0c00929c
                                0x18b1 (size before relaxing)
  .debug_str     0x0001021b       0x65 ./Dave/Generated/DAVE.o
                                0x477b (size before relaxing)
- .debug_str     0x00010280      0x4fc ./main.o
-                               0x406a (size before relaxing)
+ .debug_str     0x00010280      0x4e1 ./main.o
+                               0x404f (size before relaxing)
 
 .debug_loc      0x00000000     0xe022
  *(.debug_loc)

@@ -128,11 +128,9 @@ void SYS2(void)
 	PI_REG(&PI_predkosc, uchyb);
 	Iq_zadane = PI_predkosc.y;
 	 */
-	 uchyb = poz_zad - kat_absolutny;
 
-	//ZADAWANIE MOMENTU
-	int32_t sila = (ks * uchyb)/1000 - ((kd * predkosc_enkoder)/1000);
-	Iq_zadane = sila;
+
+
 
 
 
@@ -165,12 +163,12 @@ void SYS1(void)
 
 	Id_poprzednie = -Id_poprzednie;
 	Iq_poprzednie = -Iq_poprzednie;
-/*
-	if(kat_absolutny < - 4000)			//Zabezpieczenie zeby silniki nie walnely w siebie srubami
-		Iq_zadane = 20000;
-	if(kat_absolutny > 32000)
-		Iq_zadane = - 20000;
-*/
+
+	//ZADAWANIE MOMENTU
+	 uchyb = poz_zad - kat_absolutny;
+	int32_t sila = (ks * uchyb)/1000 - ((kd * predkosc_enkoder)/1000);
+	Iq_zadane = sila;
+
 	uchyb_Id = Id_zadane - Id_poprzednie;
 	uchyb_Iq = Iq_zadane - Iq_poprzednie;
 
@@ -186,7 +184,6 @@ void SYS1(void)
   	angle32 =((int32_t)angle+INT16_MAX) *256;
 
   	PWM_SVM_SVMUpdate(&SVPWM, V_ref, angle32);
-
 
   	int32_t Ix = ((iw - iv) * 56775) / UINT16_MAX;
   	int32_t Iy = iu - ((iv+iw)/2);
@@ -271,10 +268,10 @@ void LiczeniePradu(void)
 	i[0] = (i[0] * v3v) / 4095;
 	i[0] *= 5;
 
-	iu = (iu * 14) + (i[0]* 2);
-	iu = iu >> 4;
-	iv = (iv * 14) + (i[1]* 2);
-	iv = iv >> 4;
+	iu = (iu * 6) + (i[0]* 2);
+	iu = iu >> 3;
+	iv = (iv * 6) + (i[1]* 2);
+	iv = iv >> 3;
 
 	iw = - iu - iv;
 }
@@ -287,17 +284,15 @@ void ADC_Pomiary(void)
 }
 void XMC_Init()
 {
-	switch (silnik) {
+	switch (silnik) {									//TODO dodac konfiguracje dla pozostałych silnikow
 		case 0:
 			adress = 0x10;
 			offset_elektryczny = -11200;
-
 			znak = -1;
 			break;
 		case 1:
 			adress = 0x11;
 			offset_elektryczny = -25500;
-
 			znak = 1;
 			break;
 		default:
