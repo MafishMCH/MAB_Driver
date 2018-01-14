@@ -3224,7 +3224,7 @@
  389 0022 00BF     	 .section .rodata.UART_0_channel_config,"a",%progbits
  390              	 .align 2
  393              	UART_0_channel_config:
- 394 0000 40420F00 	 .word 1000000
+ 394 0000 00C20100 	 .word 115200
  395 0004 08       	 .byte 8
  396 0005 08       	 .byte 8
  397 0006 01       	 .byte 1
@@ -3388,7 +3388,7 @@
   93:../Dave/Generated/UART/uart_conf.c **** /*USIC channel configuration*/
   94:../Dave/Generated/UART/uart_conf.c **** const XMC_UART_CH_CONFIG_t UART_0_channel_config =
   95:../Dave/Generated/UART/uart_conf.c **** {
-  96:../Dave/Generated/UART/uart_conf.c ****   .baudrate      = 1000000U,
+  96:../Dave/Generated/UART/uart_conf.c ****   .baudrate      = 115200U,
   97:../Dave/Generated/UART/uart_conf.c ****   .data_bits     = 8U,
   98:../Dave/Generated/UART/uart_conf.c ****   .frame_length  = 8U,
   99:../Dave/Generated/UART/uart_conf.c ****   .stop_bits     = 1U,

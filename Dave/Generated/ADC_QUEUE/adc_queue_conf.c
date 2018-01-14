@@ -126,7 +126,7 @@ const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_0_init_config_0 =
 ADC_QUEUE_t ADC_QUEUE_0 =
 {
   .iclass_config_handle = {
-                           .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+                           .sample_time_std_conv= (uint32_t) 4, /*The required STCS value.*/
                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /* Conversion mode for ADC_QUEUE_0*/
                           },
   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G0, /* Group pointer for ADC_QUEUE_0*/
@@ -179,7 +179,7 @@ const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_1_init_config_1 =
 ADC_QUEUE_t ADC_QUEUE_1 =
 {
   .iclass_config_handle = {
-                           .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+                           .sample_time_std_conv= (uint32_t) 4, /*The required STCS value.*/
                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /* Conversion mode for ADC_QUEUE_1*/
                           },
   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G1, /* Group pointer for ADC_QUEUE_1*/
@@ -232,7 +232,7 @@ const XMC_VADC_QUEUE_CONFIG_t ADC_QUEUE_2_init_config_2 =
 ADC_QUEUE_t ADC_QUEUE_2 =
 {
   .iclass_config_handle = {
-                           .sample_time_std_conv= (uint32_t) 16, /*The required STCS value.*/
+                           .sample_time_std_conv= (uint32_t) 4, /*The required STCS value.*/
                            .conversion_mode_standard        = (uint32_t) XMC_VADC_CONVMODE_12BIT, /* Conversion mode for ADC_QUEUE_2*/
                           },
   .group_handle         = (XMC_VADC_GROUP_t*)(void*)VADC_G2, /* Group pointer for ADC_QUEUE_2*/

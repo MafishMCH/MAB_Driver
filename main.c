@@ -21,6 +21,7 @@ void delay(uint32_t);
 float t = 0.0f;
 int main(void)
 {
+
 	tData[0] = 0x3F;
 	tData[1] = 0xFF;
 
@@ -43,7 +44,7 @@ int main(void)
   status = (UART_STATUS_t)UART_Init(&UART_0);
   uint32_t SYS1_Id = SYSTIMER_CreateTimer(120U, SYSTIMER_MODE_PERIODIC, (void*)SYS1, NULL);
   uint32_t SYS2_V = SYSTIMER_CreateTimer(1000U, SYSTIMER_MODE_PERIODIC, (void*)SYS2, NULL);
-
+	delay(500000);
   XMC_Init();
 
   //DRV setup
@@ -63,12 +64,12 @@ int main(void)
 
 	enkoder();															///zeby poprawnie liczyc kat absolutny kat_enkoder nie moze byc = 0 na poczatku!
 	kat_enkoder_poprzedni = kat_enkoder;
-	SYSTIMER_StartTimer(SYS1_Id);
+	//SYSTIMER_StartTimer(SYS1_Id);
 	SYSTIMER_StartTimer(SYS2_V);
   /* Placeholder for user application code. The while loop below can be replaced with user application code. */
   while(1U)
   {
-
+	  SYS1();
   }
 }
 int32_t uchyb;
@@ -165,10 +166,27 @@ void SYS1(void)
 	Iq_poprzednie = -Iq_poprzednie;
 
 	//ZADAWANIE MOMENTU
+
 	 uchyb = poz_zad - kat_absolutny;
 	int32_t sila = (ks * uchyb)/1000 - ((kd * predkosc_enkoder)/1000);
-	Iq_zadane = sila;
+	if(sila > 0)
+		{
+		Vq_zadane = 30000;
+		Vd_zadane  = 0;
+		}
+	else
+		{
+		Vq_zadane = -30000;
+		Vd_zadane = 0;
+		}
+	if(sila > 0)
+		V_ref = sila;
+	else
+		V_ref = -sila;
+	if(V_ref > 4200)
+		V_ref = 4200;
 
+/*
 	uchyb_Id = Id_zadane - Id_poprzednie;
 	uchyb_Iq = Iq_zadane - Iq_poprzednie;
 
@@ -176,10 +194,10 @@ void SYS1(void)
 	PI_REG(&PI_Iq,uchyb_Iq);
 	Vd_zadane = PI_Id.y;
 	Vq_zadane = PI_Iq.y;
-
+*/
   	V_alfa = MOTOR_LIB_IParkTransform(Vd_zadane, Vq_zadane, kat_elektryczny, &V_beta);
 
-  	 V_ref = MOTOR_LIB_Car2Pol(V_alfa, V_beta, &angle);
+  	uint32_t paceholder = MOTOR_LIB_Car2Pol(V_alfa, V_beta, &angle);
 
   	angle32 =((int32_t)angle+INT16_MAX) *256;
 
@@ -217,7 +235,7 @@ void DRV_START(void)
 	uint8_t rec[10] = {0};
 	uint8_t sendData[2];
 	sendData[0] = 0b00011000;
-	sendData[1] = 0b00000100;	// <ustawienie wzmocnienia na 20
+	sendData[1] = 0b00000000;	// <ustawienie wzmocnienia na 10
 	for(int i = 0; i < 5; i++)
 	{
 		SPI_MASTER_Transmit(&SPI_enkoder, sendData, 2);		//Opamp Gain
@@ -259,14 +277,14 @@ void LiczeniePradu(void)
 	*/
 	i[0] = ADC_MEASUREMENT_ADV_GetResult(&ADC_U_Channel_A_handle);
 	i[1] = ADC_MEASUREMENT_ADV_GetResult(&ADC_V_Channel_A_handle);
-
+	adc = i[0];
 	i[1] = i[1] - ivOffset;
 	i[1] = (i[1] * v3v) / 4095; // w tym miejscu sa miliwolty
-	i[1] *= 5;
+	i[1] *= 10;
 
 	i[0] = i[0] - iuOffset;
 	i[0] = (i[0] * v3v) / 4095;
-	i[0] *= 5;
+	i[0] *= 10;
 
 	iu = (iu * 6) + (i[0]* 2);
 	iu = iu >> 3;
@@ -340,7 +358,7 @@ void interpreter_wiadomosci()
 {
 	if(rxData[0] == SOF && rxData[1] == adress)
 	{
-		if(init == 0 && rxData[2] == INIT)			//inicjalizacja
+		if(rxData[2] == INIT)			//inicjalizacja
 		{
 			init = 1;
 			txData[3] =INIT;
@@ -356,9 +374,11 @@ void interpreter_wiadomosci()
 			txData[6] = EOF;
 			UART_Transmit(&UART_0, txData, 7);
 		}
-		else															//zadawanie momentu
+		else	if ( init == 1)														//zadawanie momentu
 		{
 			poz_zad = rxData[2] << 8 | rxData[3];
+			ks = rxData[4] << 8 | rxData[5];
+			kd = rxData[6] << 8 | txData[7];
 			UART_Transmit(&UART_0, txData, 10);
 		}
 	}

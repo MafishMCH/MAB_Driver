@@ -209,10 +209,10 @@ XMC_CCU8_SLICE_DEAD_TIME_CONFIG_t SVPWM_DeadTimeConfig =
  .channel2_st_path                  = 1U,
  .channel2_inv_st_path              = 1U,  
  .div                               = 0U,
- .channel1_st_rising_edge_counter   = 0x6U,
- .channel1_st_falling_edge_counter  = 0x6U,
- .channel2_st_rising_edge_counter   = 0x6U,
- .channel2_st_falling_edge_counter  = 0x6U   
+ .channel1_st_rising_edge_counter   = 0x3cU,
+ .channel1_st_falling_edge_counter  = 0x3cU,
+ .channel2_st_rising_edge_counter   = 0x3cU,
+ .channel2_st_falling_edge_counter  = 0x3cU   
 };
 
 /* External Start event for all slices */
@@ -280,7 +280,7 @@ const PWM_SVM_Config_t SVPWM_AppConfig =
 {
   .config_phasev_crs     = (uint32_t *)&CCU80_CC81->CR1S,
   .config_phasew_crs     = (uint32_t *)&CCU80_CC80->CR1S,
-  .pwm_frequency         = 20000U,
+  .pwm_frequency         = 18000U,
   .module_freq           = 120000000U, 
   .sync_start_mask       = 0x100U,
   .shadow_transfer_mask  = 0x1111U,
@@ -314,7 +314,7 @@ const PWM_SVM_Config_t SVPWM_AppConfig =
   .phase_v_out0          = XMC_CCU8_SLICE_OUTPUT_0,
   .phase_w_out0          = XMC_CCU8_SLICE_OUTPUT_0,
   .current_offset        = (uint16_t)0,
-  .amplitude_scale       = (uint16_t)187,
+  .amplitude_scale       = (uint16_t)208,
   .enable_periodmatch    = (uint8_t)true,
   .enable_trapevent      = (uint8_t)false,
   .enable_optimized_slice= (uint8_t)false,
@@ -368,15 +368,15 @@ PWM_SVM_t SVPWM =
   .deadtimeconfig_ptr     = (XMC_CCU8_SLICE_DEAD_TIME_CONFIG_t*)(void*)&SVPWM_DeadTimeConfig,
   .svm_schemesel_ptr      = (PWM_SVM_SVMSCHEME_PTR_t)PWM_SVM_CalCmpValueSym7,
   .seg_time_calc_ptr      = (PWM_SVM_SEGCALC_PTR_t)PWM_SVM_TimecalcUsingLUT,
-  .period                 = 2999U,
+  .period                 = 3332U,
   .state                  = PWM_SVM_UNINITIALIZED,
   .svm_config             = (PWM_SVM_SVMCONFIG_t)PWM_SVM_7SEG_SYMM, 
-  .tmin                   = 5U,
-  .tmin_14                = 3276U,
+  .tmin                   = 23U,
+  .tmin_14                = 712U,
   .max_amplitude          = 16384U,
   .over_modulation_enable = 0U,
-  .over_modulation_scale  = 36161U,
+  .over_modulation_scale  = 32547U,
   .max_amplitude_overmod  = 18841U, 
-  .t0                     = 2999U
+  .t0                     = 3332U
 };
 
