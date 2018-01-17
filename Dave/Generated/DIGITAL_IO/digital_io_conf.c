@@ -81,8 +81,8 @@ const DIGITAL_IO_t DC_CAL =
 		
 const DIGITAL_IO_t SIGNAL =
 {
-  .gpio_port = XMC_GPIO_PORT2,
-  .gpio_pin = 15U,
+  .gpio_port = XMC_GPIO_PORT3,
+  .gpio_pin = 1U,
   .gpio_config = {
     .mode = XMC_GPIO_MODE_OUTPUT_PUSH_PULL,
     .output_level = XMC_GPIO_OUTPUT_LEVEL_LOW,

@@ -148,7 +148,6 @@
     <enumValues xsi:type="ResourceModel:RegEnumValue" value="0b11" description="Reserved."/>
   </provided>
   <provided xsi:type="ResourceModel:ResourceGroup" name="P2.15 / #40" URI="http://resources/0.1.40/port/p/2/pad/15">
-    <upwardMapList xsi:type="ResourceModel:HWResource" href="../../APPS/DIGITAL_IO/v4_0_16/DIGITAL_IO_2.app#//@hwResources.0"/>
     <resourcesList name="out_p" requiredResourceUri="http://resources/0.1.40/port/p/2/out/p15"/>
     <resourcesList name="omr_ps" requiredResourceUri="http://resources/0.1.40/port/p/2/omr/ps15"/>
     <resourcesList name="omr_pr" requiredResourceUri="http://resources/0.1.40/port/p/2/omr/pr15"/>

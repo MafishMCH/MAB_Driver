@@ -21,7 +21,7 @@
   21              	 .align 2
   24              	INTERRUPT_0:
   25 0000 3E       	 .byte 62
-  26 0001 03       	 .byte 3
+  26 0001 01       	 .byte 1
   27 0002 00       	 .byte 0
   28 0003 01       	 .byte 1
   29              	 .global TIM_IRQ

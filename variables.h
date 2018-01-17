@@ -5,12 +5,12 @@
 
 //driver control vars
 
-uint8_t silnik = 0;
+uint8_t silnik = 1;
 uint8_t adress = 0;
 uint8_t init = 0;
 int8_t znak = 0;
 uint32_t is_delay = 1;
-uint32_t adc;
+uint32_t debug = 0; //special var for debugging
 // UART and comms vars
 uint8_t rxData[10] = {0};
 uint8_t txData[10] = {0};
@@ -19,8 +19,8 @@ uint8_t iterator_wiadomosci =0;
 
 // Virtual complience vars
 uint16_t poz_zad = 6000;
-uint16_t ks =0;
-uint16_t kd =0;
+uint16_t ks =400;
+uint16_t kd =600;
 
 //FOC vars
 uint8_t liczba_par_biegunow = 21;
@@ -43,7 +43,7 @@ int32_t V_alfa = 0;
 int32_t V_beta = 0;
 uint32_t V_ref = 0;
 uint32_t angle32 = 0;
-uint16_t I_net = 0;
+int16_t I_net = 0;
 
 //Encoder and SPI vars
 uint8_t tData[2];
@@ -56,7 +56,6 @@ int16_t kat_elektryczny = 0;
 int32_t kat_absolutny = 0;
 int32_t offset_elektryczny = 0;
 int16_t angle = 0;
-uint16_t offset_enkoder = 0;
 
 // ADC and current measurement vars
 int32_t v3v = 3324;

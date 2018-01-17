@@ -44,7 +44,9 @@ int main(void)
   status = (UART_STATUS_t)UART_Init(&UART_0);
   uint32_t SYS1_Id = SYSTIMER_CreateTimer(120U, SYSTIMER_MODE_PERIODIC, (void*)SYS1, NULL);
   uint32_t SYS2_V = SYSTIMER_CreateTimer(1000U, SYSTIMER_MODE_PERIODIC, (void*)SYS2, NULL);
-	delay(500000);
+  DIGITAL_IO_SetOutputHigh(&SIGNAL);
+  for(uint32_t i =0; i < 1000000; i++);
+  DIGITAL_IO_SetOutputLow(&SIGNAL);
   XMC_Init();
 
   //DRV setup
@@ -64,9 +66,8 @@ int main(void)
 
 	enkoder();															///zeby poprawnie liczyc kat absolutny kat_enkoder nie moze byc = 0 na poczatku!
 	kat_enkoder_poprzedni = kat_enkoder;
-	//SYSTIMER_StartTimer(SYS1_Id);
 	SYSTIMER_StartTimer(SYS2_V);
-  /* Placeholder for user application code. The while loop below can be replaced with user application code. */
+
   while(1U)
   {
 	  SYS1();
@@ -123,18 +124,6 @@ void SYS2(void)
 	}
 
 	kat_enkoder_poprzedni = kat_enkoder_obecny;
-
-	/*		REGULATOR PREDKOSCI
-	int32_t uchyb = predkosc_zadana - predkosc_enkoder;
-	PI_REG(&PI_predkosc, uchyb);
-	Iq_zadane = PI_predkosc.y;
-	 */
-
-
-
-
-
-
 }
 void enkoder(void)
 {
@@ -157,34 +146,38 @@ void SYS1(void)
 	kat_elektryczny = kat_elektryczny_temp + offset_elektryczny;
 
 	LiczeniePradu();
-
+	/*
 	I_beta = MOTOR_LIB_ClarkTransform(iu,iv,&I_alfa);
 
 	Id_poprzednie = MOTOR_LIB_ParkTransform(I_alfa, I_beta, kat_elektryczny, &Iq_poprzednie);
 
 	Id_poprzednie = -Id_poprzednie;
 	Iq_poprzednie = -Iq_poprzednie;
+*/
 
 	//ZADAWANIE MOMENTU
 
-	 uchyb = poz_zad - kat_absolutny;
+	uchyb = poz_zad - kat_absolutny;
 	int32_t sila = (ks * uchyb)/1000 - ((kd * predkosc_enkoder)/1000);
 	if(sila > 0)
-		{
+	{
 		Vq_zadane = 30000;
 		Vd_zadane  = 0;
-		}
+		V_ref = sila;
+	}
 	else
-		{
+	{
 		Vq_zadane = -30000;
 		Vd_zadane = 0;
-		}
-	if(sila > 0)
-		V_ref = sila;
-	else
 		V_ref = -sila;
+	}
 	if(V_ref > 4200)
 		V_ref = 4200;
+
+	if(kat_absolutny > 40000)
+		{ V_ref = 4000; Vq_zadane = -30000; }
+	else if ( kat_absolutny < -2000)
+		{ V_ref = 4000; Vq_zadane = 30000; }
 
 /*
 	uchyb_Id = Id_zadane - Id_poprzednie;
@@ -197,7 +190,7 @@ void SYS1(void)
 */
   	V_alfa = MOTOR_LIB_IParkTransform(Vd_zadane, Vq_zadane, kat_elektryczny, &V_beta);
 
-  	uint32_t paceholder = MOTOR_LIB_Car2Pol(V_alfa, V_beta, &angle);
+  	uint32_t placeholder = MOTOR_LIB_Car2Pol(V_alfa, V_beta, &angle);
 
   	angle32 =((int32_t)angle+INT16_MAX) *256;
 
@@ -208,6 +201,8 @@ void SYS1(void)
   	Iy *= Iy;
   	Iy += Ix*Ix;
   	I_net = sqrtf(Iy);
+  	if(Vq_zadane < 0)
+  		I_net = -I_net;
 
 	txData[3] = I_net >> 8;
 	txData[4] = I_net;
@@ -215,9 +210,6 @@ void SYS1(void)
 	txData[6] = kat_absolutny >> 16;
 	txData[7] = kat_absolutny >> 8;
 	txData[8] = kat_absolutny;
-
-	 //DAC_SingleValue_SetValue_u16(&ANALOG, Iq_poprzednie);
-	 //DAC_SingleValue_SetValue_u16(&ANALOG2, Iq_poprzednie);
 
 	DIGITAL_IO_SetOutputLow(&SIGNAL);
 }
@@ -263,21 +255,9 @@ void DRV_START(void)
 }
 void LiczeniePradu(void)
 {
-	/*
 	i[0] = ADC_MEASUREMENT_ADV_GetResult(&ADC_U_Channel_A_handle);
 	i[1] = ADC_MEASUREMENT_ADV_GetResult(&ADC_V_Channel_A_handle);
 
-	iv = i[1] - ivOffset;
-	iv = (iv * v3v) / 4095; // w tym miejscu sa miliwolty
-	iv *= 5;
-
-	iu = i[0] - iuOffset;
-	iu = (iu * v3v) / 4095;
-	iu *= 5;
-	*/
-	i[0] = ADC_MEASUREMENT_ADV_GetResult(&ADC_U_Channel_A_handle);
-	i[1] = ADC_MEASUREMENT_ADV_GetResult(&ADC_V_Channel_A_handle);
-	adc = i[0];
 	i[1] = i[1] - ivOffset;
 	i[1] = (i[1] * v3v) / 4095; // w tym miejscu sa miliwolty
 	i[1] *= 10;
@@ -305,11 +285,41 @@ void XMC_Init()
 	switch (silnik) {									//TODO dodac konfiguracje dla pozostałych silnikow
 		case 0:
 			adress = 0x10;
-			offset_elektryczny = -11200;
+			offset_elektryczny = 8000;
 			znak = -1;
 			break;
 		case 1:
 			adress = 0x11;
+			offset_elektryczny = -1590;
+			znak = 1;
+			break;
+		case 2:
+			adress = 0x12;
+			offset_elektryczny = -14100;
+			znak = -1;
+			break;
+		case 3:
+			adress = 0x13;
+			offset_elektryczny = -7850;
+			znak = 1;
+			break;
+		case 4:
+			adress = 0x14;
+			offset_elektryczny = -25500;
+			znak = -1;
+			break;
+		case 5:
+			adress = 0x15;
+			offset_elektryczny = 32000;
+			znak = 1;
+			break;
+		case 6:
+			adress = 0x16;
+			offset_elektryczny = 25840;
+			znak = -1;
+			break;
+		case 7:
+			adress = 0x17;
 			offset_elektryczny = -25500;
 			znak = 1;
 			break;
@@ -326,7 +336,6 @@ void XMC_Init()
 		UART_Receive(&UART_0, &rxByte,1);
 
 		DIGITAL_IO_ToggleOutput(&LED);
-		delay(50000);
 	}
 	DIGITAL_IO_SetOutputLow(&LED);
 }
@@ -347,7 +356,7 @@ void end_receive()
 		interpreter_wiadomosci();
 
 	}
-	else if ( iterator_wiadomosci < 9)
+	else if ( iterator_wiadomosci < 10)
 	{
 		rxData[iterator_wiadomosci] =rxByte;
 		iterator_wiadomosci++;
@@ -364,7 +373,7 @@ void interpreter_wiadomosci()
 			txData[3] =INIT;
 			txData[4] =init;
 			txData[5] = EOF;
-			UART_Transmit(&UART_0, txData, 6);
+			//UART_Transmit(&UART_0, txData, 6);
 		}
 		else if(rxData[2] == CHECK)				//status check
 		{
@@ -372,14 +381,16 @@ void interpreter_wiadomosci()
 			txData[4] =init;
 			txData[5] = silnik;
 			txData[6] = EOF;
-			UART_Transmit(&UART_0, txData, 7);
+			//UART_Transmit(&UART_0, txData, 7);
 		}
 		else	if ( init == 1)														//zadawanie momentu
 		{
 			poz_zad = rxData[2] << 8 | rxData[3];
 			ks = rxData[4] << 8 | rxData[5];
 			kd = rxData[6] << 8 | txData[7];
-			UART_Transmit(&UART_0, txData, 10);
+			if(poz_zad > 40000 || poz_zad < -2000 || ks > 12000)					//basic error correction mechanism
+				{ poz_zad = 16000; ks = 100; }
+			//UART_Transmit(&UART_0, txData, 10);
 		}
 	}
 }

@@ -3538,14 +3538,14 @@
  526 0054 FFF7FEFF 	 bl __NVIC_GetPriorityGrouping
  527 0058 0346     	 mov r3,r0
  528 005a 1846     	 mov r0,r3
- 529 005c 0421     	 movs r1,#4
+ 529 005c 0121     	 movs r1,#1
  530 005e 0022     	 movs r2,#0
  531 0060 FFF7FEFF 	 bl NVIC_EncodePriority
  532 0064 0346     	 mov r3,r0
  533 0066 5B20     	 movs r0,#91
  534 0068 1946     	 mov r1,r3
  535 006a FFF7FEFF 	 bl __NVIC_SetPriority
- 187:../Dave/Generated/UART/uart_conf.c ****                         4U, 0U));
+ 187:../Dave/Generated/UART/uart_conf.c ****                         1U, 0U));
  188:../Dave/Generated/UART/uart_conf.c ****   NVIC_EnableIRQ((IRQn_Type)91);
  536              	 .loc 4 188 0
  537 006e 5B20     	 movs r0,#91
@@ -3556,14 +3556,14 @@
  540 0074 FFF7FEFF 	 bl __NVIC_GetPriorityGrouping
  541 0078 0346     	 mov r3,r0
  542 007a 1846     	 mov r0,r3
- 543 007c 0221     	 movs r1,#2
+ 543 007c 0121     	 movs r1,#1
  544 007e 0022     	 movs r2,#0
  545 0080 FFF7FEFF 	 bl NVIC_EncodePriority
  546 0084 0346     	 mov r3,r0
  547 0086 5A20     	 movs r0,#90
  548 0088 1946     	 mov r1,r3
  549 008a FFF7FEFF 	 bl __NVIC_SetPriority
- 191:../Dave/Generated/UART/uart_conf.c ****                       2U, 0U));
+ 191:../Dave/Generated/UART/uart_conf.c ****                       1U, 0U));
  192:../Dave/Generated/UART/uart_conf.c ****   NVIC_EnableIRQ((IRQn_Type)90);
  550              	 .loc 4 192 0
  551 008e 5A20     	 movs r0,#90

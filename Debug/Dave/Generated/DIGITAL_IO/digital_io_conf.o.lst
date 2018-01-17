@@ -45,12 +45,12 @@
   49              	 .section .rodata.SIGNAL,"a",%progbits
   50              	 .align 2
   53              	SIGNAL:
-  54 0000 00820248 	 .word 1208123904
+  54 0000 00830248 	 .word 1208124160
   55 0004 80       	 .byte -128
   56 0005 000000   	 .space 3
   57 0008 00000100 	 .word 65536
   58 000c 00000000 	 .space 4
-  59 0010 0F       	 .byte 15
+  59 0010 01       	 .byte 1
   60 0011 00       	 .byte 0
   61 0012 0000     	 .space 2
   62              	 .text
